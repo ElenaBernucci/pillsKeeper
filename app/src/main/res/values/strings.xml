@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">pagina1</string>
+    <string name="iniziamo">iniziamo</string>
+    <string name="benvenuto">Benvenuto!</string>
+    <string name="cel_dveloping">CEL DVELOPING</string>
+    <string name="button">Button</string>
+    <string name="farmacia">farmacia</string>
+    <string name="farmaci">farmaci</string>
+    <string name="medico">medico</string>
+    <string name="contatti">contatti</string>
+    <string name="todo">TODO</string>
+    <string name="dottore">dottore</string>
+    <string name="pills_keeper">Pills Keeper</string>
+</resources>
