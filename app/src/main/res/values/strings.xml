@@ -9,4 +9,6 @@
     <string name="medico">medico</string>
     <string name="contatti">contatti</string>
     <string name="todo">TODO</string>
+    <string name="dottore">dottore</string>
+    <string name="pills_keeper">Pills Keeper</string>
 </resources>
