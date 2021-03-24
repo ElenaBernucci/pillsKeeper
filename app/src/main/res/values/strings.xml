@@ -10,4 +10,5 @@
     <string name="farmaci">farmaci</string>
     <string name="medico">medico</string>
     <string name="contatti">contatti</string>
+    <string name="todo">TODO</string>
 </resources>
