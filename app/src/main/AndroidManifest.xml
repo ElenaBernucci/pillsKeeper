@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pagina1">
-        <activity android:name=".menu_iniziale"></activity>
+        <activity
+            android:name=".farmaci"
+            android:label="@string/title_activity_farmaci"
+            android:theme="@style/Theme.Pagina1.NoActionBar"></activity>
+        <activity android:name=".contatti" />
+        <activity android:name=".dottore" />
+        <activity android:name=".farmacia" />
+        <activity android:name=".reminder" />
+        <activity android:name=".menu_iniziale" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
