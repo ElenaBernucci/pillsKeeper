@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@mipmap/home" />
 
     <ImageView
         android:id="@+id/logo6"
@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/loghino" />
+        app:srcCompat="@mipmap/loghino" />
 
     <ImageButton
         android:id="@+id/menuContatti"
@@ -58,6 +58,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055"
-        app:srcCompat="@drawable/menu" />
+        app:srcCompat="@mipmap/menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
