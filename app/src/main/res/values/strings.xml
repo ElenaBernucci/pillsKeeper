@@ -24,5 +24,4 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="aggiungi_un_farmaco">aggiungi un farmaco</string>
     <string name="aggiungi_un_reminder">aggiungi un reminder</string>
-
 </resources>

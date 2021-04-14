@@ -11,13 +11,12 @@
         android:id="@+id/button"
         android:layout_width="139dp"
         android:layout_height="72dp"
-        android:text="@string/iniziamo"
+        android:layout_marginBottom="76dp"
         android:onClick="startMenuIniziale"
+        android:text="@string/iniziamo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -26,39 +25,27 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="16dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="174dp"
-        android:layout_height="47dp"
-        android:text="@string/benvenuto"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="342dp"
-        android:layout_height="252dp"
-        android:layout_marginTop="124dp"
+        android:layout_width="603dp"
+        android:layout_height="529dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_pdm" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cel_developing"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/benvenuto"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.794" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

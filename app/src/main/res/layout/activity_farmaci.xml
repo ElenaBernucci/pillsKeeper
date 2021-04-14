@@ -7,28 +7,9 @@
     tools:context=".farmaci">
 
     <ImageButton
-        android:id="@+id/menuFarmaci"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:contentDescription="@string/todo"
-        android:padding="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:scaleType="centerInside"
-        android:tint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055"
-        app:srcCompat="@drawable/menu" />
-
-    <ImageButton
         android:id="@+id/piuFarmaci"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:layout_width="70dp"
+        android:layout_height="74dp"
         android:contentDescription="@string/todo"
         android:padding="0dp"
         android:paddingLeft="0dp"
@@ -38,23 +19,24 @@
         android:tint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/piu" />
 
     <ImageView
         android:id="@+id/freccia"
-        android:layout_width="78dp"
-        android:layout_height="98dp"
+        android:layout_width="125dp"
+        android:layout_height="164dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465"
-        app:srcCompat="@drawable/freccia" />
+        app:layout_constraintVertical_bias="0.447"
+        app:srcCompat="@drawable/arrow" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -71,8 +53,8 @@
 
     <ImageButton
         android:id="@+id/homeDaReminder2"
-        android:layout_width="61dp"
-        android:layout_height="66dp"
+        android:layout_width="76dp"
+        android:layout_height="79dp"
         android:contentDescription="@string/todo"
         android:onClick="startMenuIniziale"
         android:padding="0dp"
@@ -83,20 +65,21 @@
         android:tint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/home" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="444dp"
+        android:layout_marginBottom="448dp"
         android:text="@string/aggiungi_un_farmaco"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
