@@ -11,10 +11,20 @@
         android:id="@+id/button"
         android:layout_width="139dp"
         android:layout_height="72dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="88dp"
         android:onClick="startMenuIniziale"
         android:text="@string/iniziamo"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:text="@string/benvenuto"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -27,25 +37,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="603dp"
-        android:layout_height="529dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="496dp"
+        android:layout_height="437dp"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="153dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/benvenuto"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

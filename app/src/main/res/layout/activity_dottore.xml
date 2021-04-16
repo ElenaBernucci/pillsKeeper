@@ -7,36 +7,37 @@
     tools:context=".dottore">
 
     <ImageButton
-        android:id="@+id/homeDaDottore"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:id="@+id/homeDaReminder4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
         android:onClick="startMenuIniziale"
         android:padding="0dp"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
         android:paddingRight="0dp"
-        android:scaleType="centerInside"
+        android:scaleType="fitStart"
         android:tint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintEnd_toStartOf="@+id/logo5"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058"
-        app:srcCompat="@drawable/home" />
+        app:layout_constraintVertical_bias="0.021"
+        app:srcCompat="@mipmap/home" />
 
     <ImageView
         android:id="@+id/logo5"
-        android:layout_width="114dp"
-        android:layout_height="122dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeDaReminder4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.003"
-        app:srcCompat="@drawable/loghino" />
+        app:srcCompat="@mipmap/loghino" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
