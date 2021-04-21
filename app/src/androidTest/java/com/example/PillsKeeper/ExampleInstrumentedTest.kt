@@ -1,4 +1,4 @@
-package com.example.pagina1
+package com.example.PillsKeeper
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

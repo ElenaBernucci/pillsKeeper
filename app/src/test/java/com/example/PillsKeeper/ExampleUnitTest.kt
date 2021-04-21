@@ -1,4 +1,4 @@
-package com.example.pagina1
+package com.example.PillsKeeper
 
 import org.junit.Test
 

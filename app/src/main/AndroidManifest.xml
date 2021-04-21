@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pagina1">
+    package="com.example.PillsKeeper">
 
     <application
         android:allowBackup="true"
@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pagina1">
+        android:theme="@style/Theme.PillsKeeper">
         <activity
-            android:name=".farmaci"
+            android:name="com.example.PillsKeeper.pillole"
             android:label="@string/title_activity_farmaci"
-            android:theme="@style/Theme.Pagina1.NoActionBar"></activity>
-        <activity android:name=".contatti" />
-        <activity android:name=".dottore" />
-        <activity android:name=".farmacia" />
-        <activity android:name=".reminder" />
-        <activity android:name=".menu_iniziale" />
-        <activity android:name=".MainActivity">
+            android:theme="@style/Theme.PillsKeeper"></activity>
+        <activity android:name="com.example.PillsKeeper.contatti" />
+        <activity android:name="com.example.PillsKeeper.dottore" />
+        <activity android:name="com.example.PillsKeeper.farmacia" />
+        <activity android:name="com.example.PillsKeeper.reminder" />
+        <activity android:name="com.example.PillsKeeper.menu_iniziale" />
+        <activity android:name="com.example.PillsKeeper.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
