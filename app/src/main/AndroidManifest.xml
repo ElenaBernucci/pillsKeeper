@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pagina1">
+    package="com.example.pillsKeeper">
 
     <application
         android:allowBackup="true"
@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pagina1">
         <activity
-            android:name=".farmaci"
+            android:name="com.example.pillsKeeper.farmaci"
             android:label="@string/title_activity_farmaci"
-            android:theme="@style/Theme.Pagina1.NoActionBar"></activity>
-        <activity android:name=".contatti" />
-        <activity android:name=".dottore" />
-        <activity android:name=".farmacia" />
-        <activity android:name=".reminder" />
-        <activity android:name=".menu_iniziale" />
-        <activity android:name=".MainActivity">
+            android:theme="@style/Theme.Pagina1"></activity>
+        <activity android:name="com.example.pillsKeeper.contatti" />
+        <activity android:name="com.example.pillsKeeper.dottore" />
+        <activity android:name="com.example.pillsKeeper.farmacia" />
+        <activity android:name="com.example.pillsKeeper.reminder" />
+        <activity android:name="com.example.pillsKeeper.menu_iniziale" />
+        <activity android:name="com.example.pillsKeeper.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

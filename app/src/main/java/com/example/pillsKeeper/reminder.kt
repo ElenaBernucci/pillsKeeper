@@ -1,4 +1,4 @@
-package com.example.pagina1
+package com.example.pillsKeeper
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
