@@ -1,27 +1,30 @@
 <resources>
-    <string name="app_name">Pills Keeper</string>
+    <string name="app_name" translatable="false">Pills Keeper</string>
     <string name="iniziamo">iniziamo</string>
     <string name="benvenuto">Benvenuto!</string>
-    <string name="cel_dveloping">CEL DVELOPING</string>
-    <string name="button">Button</string>
+    <string name="cel_dveloping" translatable="false">CEL DVELOPING</string>
+    <string name="button" translatable="false">Button</string>
     <string name="farmacia">farmacia</string>
     <string name="farmaci">farmaci</string>
     <string name="medico">medico</string>
     <string name="contatti">contatti</string>
-    <string name="todo">TODO</string>
+    <string name="todo" translatable="false">TODO</string>
     <string name="dottore">dottore</string>
-    <string name="pills_keeper">Pills Keeper</string>
-    <string name="cel_developing">CEL DEVELOPING</string>
-    <string name="reminder">reminder</string>
+    <string name="pills_keeper" translatable="false">Pills Keeper</string>
+    <string name="cel_developing" translatable="false">CEL DEVELOPING</string>
+    <string name="reminder">promemoria</string>
     <string name="title_activity_farmaci">farmaci</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="aggiungi_un_farmaco">aggiungi un farmaco</string>
     <string name="aggiungi_un_reminder">aggiungi un reminder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Accesso_non_eseguito">Ops, sembra che tu non sia ancora registrato. <br>Premi qui per creare o accedere ad un account.</br></string>
 </resources>

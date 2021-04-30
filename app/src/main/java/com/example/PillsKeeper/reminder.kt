@@ -12,7 +12,7 @@ class reminder : AppCompatActivity() {
     }
 
     fun startMenuIniziale(v: View) {
-        val intent = Intent(this@reminder, menu_iniziale::class.java)
+        val intent = Intent(this@reminder, MenuIniziale::class.java)
         startActivity(intent)
     }
 }

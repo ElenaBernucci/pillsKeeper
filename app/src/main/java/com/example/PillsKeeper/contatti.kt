@@ -1,9 +1,10 @@
 package com.example.PillsKeeper
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class contatti : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,7 +12,7 @@ class contatti : AppCompatActivity() {
         setContentView(R.layout.activity_contatti)
     }
     fun startMenuIniziale(v: View) {
-        val intent = Intent(this@contatti, menu_iniziale::class.java)
+        val intent = Intent(this@contatti, MenuIniziale::class.java)
         startActivity(intent)
     }
 }

@@ -11,7 +11,7 @@ class farmacia : AppCompatActivity() {
         setContentView(R.layout.activity_farmacia)
     }
     fun startMenuIniziale(v: View) {
-        val intent = Intent(this@farmacia, menu_iniziale::class.java)
+        val intent = Intent(this@farmacia, MenuIniziale::class.java)
         startActivity(intent)
     }
 }

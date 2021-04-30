@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun startMenuIniziale(v: View) {
-        val intent = Intent(this@MainActivity, menu_iniziale::class.java)
+        val intent = Intent(this@MainActivity, MenuIniziale::class.java)
         startActivity(intent)
     }
 

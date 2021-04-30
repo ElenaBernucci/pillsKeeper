@@ -12,7 +12,7 @@ class pillole : AppCompatActivity() {
     }
 
     fun startMenuIniziale(v: View) {
-        val intent = Intent(this@pillole, menu_iniziale::class.java)
+        val intent = Intent(this@pillole, MenuIniziale::class.java)
         startActivity(intent)
     }
 }

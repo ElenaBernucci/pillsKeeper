@@ -12,7 +12,7 @@ class dottore : AppCompatActivity() {
     }
 
     fun startMenuIniziale(v: View) {
-        val intent = Intent(this@dottore, menu_iniziale::class.java)
+        val intent = Intent(this@dottore, MenuIniziale::class.java)
         startActivity(intent)
     }
 }
