@@ -6,35 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="143dp"
-        android:layout_height="143dp"
-        android:contentDescription="foto"
+    <ImageButton
+        android:id="@+id/imageButtonFarmaci2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
         android:scaleType="fitStart"
-        android:src="@mipmap/account"
-        app:layout_constraintBottom_toTopOf="@+id/prova"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
-
-    <TextView
-        android:id="@+id/prova"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:padding="24dp"
-        android:text="@string/Accesso_non_eseguito"
-        android:textSize="24sp"
+        android:tint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonReminder2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607" />
+        app:layout_constraintVertical_bias="0.975"
+        app:srcCompat="@mipmap/pills" />
 
     <ImageButton
-        android:id="@+id/btnPlus"
+        android:id="@+id/imageButtonReminder2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:scaleType="fitStart"
+        android:tint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonFarmacia2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFarmaci2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        app:srcCompat="@mipmap/reminder" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFarmacia2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:scaleType="fitStart"
+        android:tint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonMedico2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonReminder2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        app:srcCompat="@mipmap/pharmacy" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMedico2"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="#00FFFFFF"
@@ -47,11 +82,58 @@
         android:tint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFarmacia2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        app:srcCompat="@mipmap/doctor" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:contentDescription="foto"
+        android:scaleType="fitStart"
+        android:src="@mipmap/account"
+        app:layout_constraintBottom_toTopOf="@+id/prova"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.868" />
+
+    <ImageButton
+        android:id="@+id/imageButtonReminder"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/todo"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:scaleType="fitStart"
+        android:tint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonReminder2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prova"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.116"
         app:srcCompat="@mipmap/plus" />
+
+    <TextView
+        android:id="@+id/prova"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:padding="24dp"
+        android:text="@string/Accesso_non_eseguito"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonReminder2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

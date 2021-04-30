@@ -21,94 +21,11 @@
         app:srcCompat="@mipmap/loghino" />
 
     <ImageButton
-        android:id="@+id/btnPlus"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/todo"
-        android:onClick="startReminder"
-        android:padding="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:scaleType="fitStart"
-        android:tint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonFarmacia"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonFarmaci"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978"
-        app:srcCompat="@mipmap/reminder" />
-
-    <ImageButton
-        android:id="@+id/imageButtonFarmacia"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/todo"
-        android:onClick="startFarmacia"
-        android:padding="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:scaleType="fitStart"
-        android:tint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonMedico"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnPlus"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978"
-        app:srcCompat="@mipmap/pharmacy" />
-
-    <ImageButton
-        android:id="@+id/imageButtonMedico"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/todo"
-        android:onClick="startDottore"
-        android:padding="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:scaleType="fitStart"
-        android:tint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonFarmacia"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978"
-        app:srcCompat="@mipmap/doctor" />
-
-    <ImageButton
-        android:id="@+id/imageButtonFarmaci"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/todo"
-        android:onClick="startFunzioni"
-        android:padding="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:scaleType="fitStart"
-        android:tint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnPlus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978"
-        app:srcCompat="@mipmap/pills" />
-
-    <ImageButton
         android:id="@+id/imageButtonContatti"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
-        android:onClick="startContatti"
         android:padding="0dp"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
@@ -123,20 +40,16 @@
         app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@mipmap/contact" />
 
-    <FrameLayout
-        android:id="@+id/Fragment"
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnPlus"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:navGraph="@navigation/nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
