@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeFarmaco5" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumDosi" />
 
     <EditText
         android:id="@+id/editTextNomeFarmaco"
@@ -97,7 +97,7 @@
         android:textColorHint="#454773"
         android:textColorLink="#454773"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNomeFarmaco3"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCasaProduttrice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -273,7 +273,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editTextNomeFarmaco5"
+        android:id="@+id/editTextNumDosi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -292,10 +292,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeFarmaco4" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDosaggio" />
 
     <EditText
-        android:id="@+id/editTextNomeFarmaco3"
+        android:id="@+id/editTextCasaProduttrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -311,14 +311,14 @@
         android:textColorHint="#454773"
         android:textColorLink="#454773"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNomeFarmaco4"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDosaggio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNomeCommerciale" />
 
     <EditText
-        android:id="@+id/editTextNomeFarmaco4"
+        android:id="@+id/editTextDosaggio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -334,11 +334,11 @@
         android:textColorHint="#454773"
         android:textColorLink="#454773"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNomeFarmaco5"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumDosi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeFarmaco3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCasaProduttrice" />
 
     <TextView
         android:id="@+id/textView3"
