@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_iniziale.*
 
 
 class FirstFragment : Fragment(), View.OnClickListener {
@@ -27,11 +28,30 @@ class FirstFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        view.findViewById<ImageButton>(R.id.imageButtonReminder).setOnClickListener(this)
+        imageButtonReminder.setOnClickListener(this)
+        imageButtonFarmaci2.setOnClickListener(this)
+        imageButtonReminder2.setOnClickListener(this)
+        imageButtonFarmacia2.setOnClickListener(this)
+        imageButtonMedico2.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        navc?.navigate(R.id.iniziale_to_iniziale_accesso)
+
+        when(v?.id){
+            R.id.imageButtonReminder -> {
+                navc?.navigate(R.id.iniziale_to_iniziale_accesso)
+            }
+            R.id.imageButtonFarmaci2 -> {
+                navc?.navigate(R.id.actionToNessunFarmaco)
+            }
+
+            R.id.imageButtonReminder2 -> {
+                navc?.navigate(R.id.actionToNoReminder)
+            }
+
+        }
+
+
     }
 
 }

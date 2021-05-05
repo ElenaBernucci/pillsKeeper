@@ -22,4 +22,9 @@
     <style name="Theme.PillsKeeper.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.PillsKeeper.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <color name="purple_500">#B533EC</color>
+    <color name="purple_700">#673AB7</color>
+    <color name="teal_200">#32F7C9</color>
+    <color name="teal_700">#28AFAB</color>
 </resources>

@@ -18,10 +18,48 @@
         <action
             android:id="@+id/iniziale_to_iniziale_accesso"
             app:destination="@id/inizialeAccessoFragment" />
+        <action
+            android:id="@+id/actionToNessunFarmaco"
+            app:destination="@id/farmaciNessunFarmaco" />
+        <action
+            android:id="@+id/actionToNoReminder"
+            app:destination="@id/reminderNessunReminder" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
         android:name="com.example.PillsKeeper.FarmaciNessunFarmaco"
         android:label="fragment_farmaci_nessun_farmaco"
-        tools:layout="@layout/fragment_farmaci_nessun_farmaco" />
+        tools:layout="@layout/fragment_farmaci_nessun_farmaco" >
+        <action
+            android:id="@+id/actionInserireUnFarmaco1"
+            app:destination="@id/faraciInserireUnFarmaco1" />
+    </fragment>
+    <fragment
+        android:id="@+id/faraciInserireUnFarmaco1"
+        android:name="com.example.PillsKeeper.FaraciInserireUnFarmaco1"
+        android:label="fragment_faraci_inserire_un_farmaco1"
+        tools:layout="@layout/fragment_faraci_inserire_un_farmaco1" >
+        <action
+            android:id="@+id/actionInserireUnFarmaco2"
+            app:destination="@id/farmaciInserireUnFarmaco2" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmaciInserireUnFarmaco2"
+        android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco2"
+        android:label="fragment_farmaci_inserire_un_farmaco2"
+        tools:layout="@layout/fragment_farmaci_inserire_un_farmaco2" />
+    <fragment
+        android:id="@+id/reminderNessunReminder"
+        android:name="com.example.PillsKeeper.ReminderNessunReminder"
+        android:label="fragment_reminder_nessun_reminder"
+        tools:layout="@layout/fragment_reminder_nessun_reminder" >
+        <action
+            android:id="@+id/actionInserireReminder"
+            app:destination="@id/reminderInserireReminder" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderInserireReminder"
+        android:name="com.example.PillsKeeper.ReminderInserireReminder"
+        android:label="fragment_reminder_inserire_reminder"
+        tools:layout="@layout/fragment_reminder_inserire_reminder" />
 </navigation>
