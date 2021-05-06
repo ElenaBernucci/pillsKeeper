@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".logNonLoggato">
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        android:textColor="#F28891"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore3" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="130dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="236dp"
+        android:src="@mipmap/account"
+        app:layout_constraintEnd_toEndOf="@+id/textViewModificaDottore2"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/textViewModificaDottore2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewModificaDottore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Accedi ad un account esistente"
+        android:textColor="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewModificaDottore3"
+        app:layout_constraintStart_toStartOf="@+id/textViewModificaDottore3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <TextView
+        android:id="@+id/textViewModificaDottore3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crea un account"
+        android:textColor="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore2"
+        app:layout_constraintVertical_bias="0.033" />
+</androidx.constraintlayout.widget.ConstraintLayout>

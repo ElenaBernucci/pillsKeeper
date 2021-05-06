@@ -36,9 +36,9 @@
     </fragment>
     <fragment
         android:id="@+id/faraciInserireUnFarmaco1"
-        android:name="com.example.PillsKeeper.FaraciInserireUnFarmaco1"
+        android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco1"
         android:label="fragment_faraci_inserire_un_farmaco1"
-        tools:layout="@layout/fragment_faraci_inserire_un_farmaco1" >
+        tools:layout="@layout/fragment_farmaci_inserire_un_farmaco1" >
         <action
             android:id="@+id/actionInserireUnFarmaco2"
             app:destination="@id/farmaciInserireUnFarmaco2" />

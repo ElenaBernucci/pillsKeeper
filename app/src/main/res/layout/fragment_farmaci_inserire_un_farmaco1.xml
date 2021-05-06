@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FaraciInserireUnFarmaco1">
+    tools:context=".FarmaciInserireUnFarmaco1">
 
     <TextView
         android:id="@+id/textView11"

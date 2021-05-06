@@ -139,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
-        android:text="< Indietro"
+        android:text="Indietro"
         android:textColor="#F28891"
         android:textSize="18sp"
         android:textStyle="bold"
