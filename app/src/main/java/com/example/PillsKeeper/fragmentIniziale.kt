@@ -49,6 +49,14 @@ class FirstFragment : Fragment(), View.OnClickListener {
                 navc?.navigate(R.id.actionToNoReminder)
             }
 
+            R.id.imageButtonFarmacia2 -> {
+                navc?.navigate(R.id.actionToFarmaciaNessunaFarmacia)
+            }
+
+            R.id.imageButtonMedico2 -> {
+                navc?.navigate(R.id.actionToDottoreNessunDottore)
+            }
+
         }
 
 

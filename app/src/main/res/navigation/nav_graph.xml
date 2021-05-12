@@ -24,6 +24,15 @@
         <action
             android:id="@+id/actionToNoReminder"
             app:destination="@id/reminderNessunReminder" />
+        <action
+            android:id="@+id/actionToFragmentNessunContatto"
+            app:destination="@id/contattiNessunContatto" />
+        <action
+            android:id="@+id/actionToDottoreNessunDottore"
+            app:destination="@id/dottoreNessunDottore" />
+        <action
+            android:id="@+id/actionToFarmaciaNessunaFarmacia"
+            app:destination="@id/farmaciaNessunaFarmacia" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
@@ -47,7 +56,11 @@
         android:id="@+id/farmaciInserireUnFarmaco2"
         android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco2"
         android:label="fragment_farmaci_inserire_un_farmaco2"
-        tools:layout="@layout/fragment_farmaci_inserire_un_farmaco2" />
+        tools:layout="@layout/fragment_farmaci_inserire_un_farmaco2" >
+        <action
+            android:id="@+id/actionToInserireUnFarmaco3"
+            app:destination="@id/farmaciInserireUnFarmaco3" />
+    </fragment>
     <fragment
         android:id="@+id/reminderNessunReminder"
         android:name="com.example.PillsKeeper.ReminderNessunReminder"
@@ -62,4 +75,47 @@
         android:name="com.example.PillsKeeper.ReminderInserireReminder"
         android:label="fragment_reminder_inserire_reminder"
         tools:layout="@layout/fragment_reminder_inserire_reminder" />
+    <fragment
+        android:id="@+id/contattiNessunContatto"
+        android:name="com.example.PillsKeeper.ContattiNessunContatto"
+        android:label="fragment_contatti_nessun_contatto"
+        tools:layout="@layout/fragment_contatti_nessun_contatto" >
+        <action
+            android:id="@+id/actionToContattiInserireUnContatto"
+            app:destination="@id/contattiInserireunContatto" />
+    </fragment>
+    <fragment
+        android:id="@+id/contattiInserireunContatto"
+        android:name="com.example.PillsKeeper.contattiInserireunContatto"
+        android:label="fragment_contatti_inserireun_contatto"
+        tools:layout="@layout/fragment_contatti_inserireun_contatto" />
+    <fragment
+        android:id="@+id/dottoreNessunDottore"
+        android:name="com.example.PillsKeeper.dottoreNessunDottore"
+        android:label="fragment_dottore_nessun_dottore"
+        tools:layout="@layout/fragment_dottore_nessun_dottore" >
+        <action
+            android:id="@+id/actionToInserireUnDottore"
+            app:destination="@id/dottoreInserireUnDottore" />
+    </fragment>
+    <fragment
+        android:id="@+id/dottoreInserireUnDottore"
+        android:name="com.example.PillsKeeper.dottoreInserireUnDottore"
+        android:label="fragment_dottore_inserire_un_dottore"
+        tools:layout="@layout/fragment_dottore_inserire_un_dottore" />
+    <fragment
+        android:id="@+id/farmaciaNessunaFarmacia"
+        android:name="com.example.PillsKeeper.FarmaciaNessunaFarmacia"
+        android:label="fragment_farmacia_nessuna_farmacia"
+        tools:layout="@layout/fragment_farmacia_nessuna_farmacia" />
+    <fragment
+        android:id="@+id/contattiContattoSelezionato"
+        android:name="com.example.PillsKeeper.contattiContattoSelezionato"
+        android:label="fragment_contatti_contatto_selezionato"
+        tools:layout="@layout/fragment_contatti_contatto_selezionato" />
+    <fragment
+        android:id="@+id/farmaciInserireUnFarmaco3"
+        android:name="com.example.PillsKeeper.farmaciInserireUnFarmaco3"
+        android:label="fragment_farmaci_inserire_un_farmaco3"
+        tools:layout="@layout/fragment_farmaci_inserire_un_farmaco3" />
 </navigation>
