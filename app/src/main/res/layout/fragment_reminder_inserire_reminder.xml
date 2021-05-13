@@ -1,14 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/frameLayout13"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ReminderInserireReminder">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salva e aggiungi il farmaco"
+        android:textColor="@color/rosa"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non salvare"
+        android:textColor="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="203dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_view_border"
+        android:ems="10"
+        android:hint="Ripetizione"
+        android:inputType="textPersonName"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime2" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="203dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_view_border"
+        android:ems="10"
+        android:hint="Quante volte al giorno"
+        android:inputType="textPersonName"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Quando:"
+        android:textColor="#8BD9EA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonPressione" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Informazioni:"
+        android:textColor="#8BD9EA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Aggiungi un nuovo reminder"
+        android:textColor="#F28891"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButtonGlicemia"
+        android:layout_width="191dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="44dp"
+        android:text="Prova la glicemia"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <RadioButton
+        android:id="@+id/radioButtonTemperatura"
+        android:layout_width="212dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:text="Misura la temperatura"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonGlicemia" />
+
+    <RadioButton
+        android:id="@+id/radioButtonSaturazione"
+        android:layout_width="212dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:text="Misura la saturazione"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonTemperatura" />
+
+    <RadioButton
+        android:id="@+id/radioButtonPressione"
+        android:layout_width="212dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:text="Misura la pressione"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonSaturazione" />
+
+    <RadioButton
+        android:id="@+id/radioButtonAltro"
+        android:layout_width="84dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="6dp"
+        android:text="Altro"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonPressione" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="125dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/text_view_border"
+        android:ems="10"
+        android:hint="Cosa devi fare"
+        android:inputType="textPersonName"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonAltro"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonPressione" />
+
+    <EditText
+        android:id="@+id/editTextTime2"
+        android:layout_width="192dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/text_view_border"
+        android:ems="10"
+        android:hint="Orario"
+        android:inputType="time"
+        android:textColor="@color/blu"
+        android:textColorHighlight="@color/blu"
+        android:textColorHint="@color/blu"
+        android:textColorLink="@color/blu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
