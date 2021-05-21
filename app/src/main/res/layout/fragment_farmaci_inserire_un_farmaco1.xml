@@ -12,6 +12,24 @@
         android:layout_height="wrap_content"
         tools:context=".FarmaciInserireUnFarmaco1">
 
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressTint="@color/azzurro"
+            android:layout_width="197dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="107dp"
+            android:layout_marginLeft="107dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginRight="107dp"
+            android:progress="33"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="130dp"
@@ -22,16 +40,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="77dp"
-            android:layout_height="73dp"
-            android:layout_marginBottom="4dp"
-            android:src="@mipmap/caricamento1"
-            app:layout_constraintBottom_toTopOf="@+id/textView11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView4"
@@ -65,15 +73,14 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="66dp"
+            android:layout_marginTop="32dp"
             android:paddingBottom="4dp"
             android:text="Avanti"
             android:textColor="#F28891"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
@@ -81,7 +88,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="28dp"
             android:text="Aggiungi un nuovo farmaco"
             android:textColor="#F28891"
             android:textSize="18sp"
