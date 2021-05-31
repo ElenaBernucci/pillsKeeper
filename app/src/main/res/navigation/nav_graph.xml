@@ -60,7 +60,11 @@
         <action
             android:id="@+id/actionToInserireUnFarmaco3"
             app:destination="@id/farmaciInserireUnFarmaco3" />
+        <action
+            android:id="@+id/action_farmaciInserireUnFarmaco2_to_farmaciConDeiFarmaci"
+            app:destination="@id/farmaciConDeiFarmaci" />
     </fragment>
+
     <fragment
         android:id="@+id/reminderNessunReminder"
         android:name="com.example.PillsKeeper.ReminderNessunReminder"
@@ -118,4 +122,9 @@
         android:name="com.example.PillsKeeper.farmaciInserireUnFarmaco3"
         android:label="fragment_farmaci_inserire_un_farmaco3"
         tools:layout="@layout/fragment_farmaci_inserire_un_farmaco3" />
+    <fragment
+        android:id="@+id/farmaciConDeiFarmaci"
+        android:name="com.example.PillsKeeper.FarmaciConDeiFarmaci"
+        android:label="fragment_farmaci_con_dei_farmaci"
+        tools:layout="@layout/fragment_farmaci_con_dei_farmaci" />
 </navigation>

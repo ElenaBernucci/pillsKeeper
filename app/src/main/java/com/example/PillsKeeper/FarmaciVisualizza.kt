@@ -17,4 +17,5 @@ class FarmaciVisualizza : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_farmaci_visualizza, container, false)
     }
+
 }
