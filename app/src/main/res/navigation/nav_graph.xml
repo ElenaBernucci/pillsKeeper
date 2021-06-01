@@ -125,11 +125,11 @@
         tools:layout="@layout/fragment_farmaci_inserire_un_farmaco3" >
         <action
             android:id="@+id/actionToFarmaciConDeiFarmaci"
-            app:destination="@id/farmaciConDeiFarmaci" />
+            app:destination="@id/farmaciVisualizza" />
     </fragment>
     <fragment
-        android:id="@+id/farmaciConDeiFarmaci"
-        android:name="com.example.PillsKeeper.FarmaciConDeiFarmaci"
-        android:label="fragment_farmaci_con_dei_farmaci"
-        tools:layout="@layout/fragment_farmaci_con_dei_farmaci" />
+        android:id="@+id/farmaciVisualizza"
+        android:name="com.example.PillsKeeper.FarmaciVisualizza"
+        android:label="fragment_farmaci_visualizza"
+        tools:layout="@layout/fragment_farmaci_visualizza" />
 </navigation>
