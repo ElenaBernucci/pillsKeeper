@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco1.*
 
 class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
 
@@ -26,7 +27,7 @@ class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        view.findViewById<TextView>(R.id.textView11).setOnClickListener(this)
+        textView11.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
