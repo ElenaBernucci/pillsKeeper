@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Inserisci/modifica foto"
+        android:text="Modifica foto"
         android:textColor="#454773"
         android:textSize="18sp"
         android:textStyle="bold"

@@ -27,7 +27,7 @@ private const val ARG_PARAM2 = "param2"
 
 
 class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -47,11 +47,11 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
         var fusedLocationProviderClient: FusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
 
-        fetchLocation()
+      //  fetchLocation()
         return view
     }
 
-    private fun fetchLocation() {
+    /*private fun fetchLocation() {
 
         val task:Task<Location> = FusedLocationProviderClient.lastLocation
 
@@ -66,7 +66,7 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
 
     }
-
+*/
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 

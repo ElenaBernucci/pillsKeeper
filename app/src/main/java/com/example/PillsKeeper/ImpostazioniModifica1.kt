@@ -1,59 +1,64 @@
 package com.example.PillsKeeper
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import com.bumptech.glide.Glide
+import java.io.File
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val PICK_IMAGE_CODE = 1234
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ImpostazioniModifica1.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ImpostazioniModifica1 : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var photoUri: Uri? = null
+    private lateinit var imagePickText : TextView
+    private lateinit var image : ImageView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_impostazioni_modifica1, container, false)
+
+        var view =  inflater.inflate(R.layout.fragment_impostazioni_modifica1, container, false)
+
+        image = view.findViewById(R.id.imageView12)
+
+        imagePickText = view.findViewById(R.id.textView16)
+        imagePickText.setOnClickListener {
+            pickImage()
+        }
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ImpostazioniModifica1.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ImpostazioniModifica1().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun pickImage(){
+        val imagePickerIntent = Intent(Intent.ACTION_GET_CONTENT)
+        imagePickerIntent.type = "image/*"
+        startActivityForResult(imagePickerIntent, PICK_IMAGE_CODE)
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == PICK_IMAGE_CODE){
+            if(resultCode == Activity.RESULT_OK){
+                photoUri = data?.data!!
+                var file = File(photoUri?.path)
+                //IMAGE CHANGE
+                Glide.with(this!!).load(photoUri).circleCrop().into(image)
+            }else{
+                Toast.makeText(context, "image pick canceled", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+    }
+
+
 }
