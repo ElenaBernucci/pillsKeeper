@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.PillsKeeper.R
+import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco2.*
 
 
 class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
@@ -26,7 +27,7 @@ class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        view.findViewById<TextView>(R.id.textView9).setOnClickListener(this)
+        textView9.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
