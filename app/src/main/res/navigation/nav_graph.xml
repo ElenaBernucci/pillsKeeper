@@ -6,18 +6,10 @@
     app:startDestination="@id/firstFragment">
 
     <fragment
-        android:id="@+id/inizialeAccessoFragment"
-        android:name="com.example.PillsKeeper.InizialeAccessoFragment"
-        android:label="fragment_iniziale_accesso"
-        tools:layout="@layout/fragment_iniziale_accesso" />
-    <fragment
         android:id="@+id/firstFragment"
         android:name="com.example.PillsKeeper.FirstFragment"
         android:label="fragment_iniziale"
         tools:layout="@layout/fragment_iniziale" >
-        <action
-            android:id="@+id/iniziale_to_iniziale_accesso"
-            app:destination="@id/inizialeAccessoFragment" />
         <action
             android:id="@+id/actionToNessunFarmaco"
             app:destination="@id/farmaciNessunFarmaco" />
@@ -33,6 +25,9 @@
         <action
             android:id="@+id/actionToFarmaciaNessunaFarmacia"
             app:destination="@id/farmaciaNessunaFarmacia" />
+        <action
+            android:id="@+id/actionToLogNonLoggato"
+            app:destination="@id/logNonLoggato" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
@@ -132,4 +127,33 @@
         android:name="com.example.PillsKeeper.farmaci.FarmaciVisualizza"
         android:label="fragment_farmaci_visualizza"
         tools:layout="@layout/fragment_farmaci_visualizza" />
+    <fragment
+        android:id="@+id/logNonLoggato"
+        android:name="com.example.PillsKeeper.utente.logNonLoggato"
+        android:label="fragment_log_non_loggato"
+        tools:layout="@layout/fragment_log_non_loggato" >
+        <action
+            android:id="@+id/actionToLogLoggato"
+            app:destination="@id/logLoggato" />
+    </fragment>
+    <fragment
+        android:id="@+id/logLoggato"
+        android:name="com.example.PillsKeeper.utente.logLoggato"
+        android:label="logLoggato" >
+        <action
+            android:id="@+id/actionToImpostazioniModifica1"
+            app:destination="@id/impostazioniModifica1" />
+    </fragment>
+    <fragment
+        android:id="@+id/impostazioniModifica1"
+        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica1"
+        android:label="ImpostazioniModifica1" >
+        <action
+            android:id="@+id/actionToImpostazioniModifica2"
+            app:destination="@id/impostazioniModifica2" />
+    </fragment>
+    <fragment
+        android:id="@+id/impostazioniModifica2"
+        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica2"
+        android:label="ImpostazioniModifica2" />
 </navigation>
