@@ -11,7 +11,7 @@
     android:id="@+id/frameLayout14"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ImpostazioniModifica2">
+    tools:context=".utente.ImpostazioniModifica2">
 
         <TextView
             android:id="@+id/textView63"
@@ -135,28 +135,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
-
-    <EditText
-        android:id="@+id/editTextAllergiefarmaci"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/text_view_border"
-        android:ems="10"
-        android:hint="Allergie farmaci"
-        android:inputType="textPersonName"
-        android:padding="4dp"
-        android:shadowColor="#000000"
-        android:singleLine="false"
-        android:textColor="#454773"
-        android:textColorHighlight="#454773"
-        android:textColorHint="#454773"
-        android:textColorLink="#454773"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAllergiegenerali" />
 
         <TextView
             android:id="@+id/textView25"
@@ -324,7 +302,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextAllergiefarmaci" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextAllergiegenerali" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

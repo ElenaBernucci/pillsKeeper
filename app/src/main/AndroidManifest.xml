@@ -20,7 +20,7 @@
             android:name=".pillole"
             android:label="@string/title_activity_farmaci"
             android:theme="@style/Theme.PillsKeeper" />
-        <activity android:name=".contatti" />
+        <activity android:name=".contatti.contatti" />
         <activity android:name=".dottore" />
         <activity android:name=".farmacia" />
         <activity android:name=".reminder" />

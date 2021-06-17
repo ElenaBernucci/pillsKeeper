@@ -10,7 +10,7 @@
         android:id="@+id/frameLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ImpostazioniModifica1">
+        tools:context=".utente.ImpostazioniModifica1">
 
         <ProgressBar
             android:id="@+id/progressBar7"

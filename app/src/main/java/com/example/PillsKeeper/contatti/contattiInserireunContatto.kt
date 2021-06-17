@@ -1,15 +1,16 @@
-package com.example.PillsKeeper
+package com.example.PillsKeeper.contatti
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.PillsKeeper.R
+import kotlinx.android.synthetic.main.fragment_contatti_inserireun_contatto.*
 
-class ReminderNessunReminder : Fragment(), View.OnClickListener {
+class contattiInserireunContatto : Fragment(), View.OnClickListener {
 
     lateinit var navc: NavController
 
@@ -17,18 +18,16 @@ class ReminderNessunReminder : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reminder_nessun_reminder, container, false)
+        return inflater.inflate(R.layout.fragment_contatti_inserireun_contatto, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         navc= Navigation.findNavController(view)
-        view.findViewById<ImageButton>(R.id.imageButtonReminder4).setOnClickListener(this)
+        textView49.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        navc?.navigate(R.id.actionInserireReminder)
+        navc?.navigate(R.id.actionToContattiContattoSelezionato)
     }
 }

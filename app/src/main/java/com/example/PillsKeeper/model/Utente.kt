@@ -13,12 +13,11 @@ class Utente (var nome: String,
               var massaMagra: String?,
               var massaGrassa: String?,
 
-              var allergieGenerali: String?,
-              var allergieFarmaci: String?,
+              var allergie: String?,
 
               var patologie: String?,
 
-              var gruppoSabguigno: String,
+              var gruppoSanguigno: String,
 
               var imageURL: String,
               ) {

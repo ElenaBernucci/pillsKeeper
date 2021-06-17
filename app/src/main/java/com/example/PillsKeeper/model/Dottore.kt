@@ -2,11 +2,11 @@ package com.example.PillsKeeper.model
 
 import java.util.*
 
-class Dottore (var nome: String,
-               var cognome: String,
+class Dottore (var nomeD: String,
+               var cognomeD: String,
                var specializzazione: String?,
 
-               var mail: String,
-               var telefono: Long,
-               var imageURL: String?) {
+               var mailD: String,
+               var telefonoD: Long,
+               var utenteId: String) {
 }

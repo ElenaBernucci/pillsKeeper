@@ -10,7 +10,7 @@
         android:id="@+id/frameLayout9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".visualizzaFarmaco">
+        tools:context=".farmaci.visualizzaFarmaco">
 
     <TextView
         android:id="@+id/textViewEliminafarmaco"

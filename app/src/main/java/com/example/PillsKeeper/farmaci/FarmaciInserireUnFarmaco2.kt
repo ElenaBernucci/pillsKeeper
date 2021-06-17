@@ -1,4 +1,4 @@
-package com.example.PillsKeeper
+package com.example.PillsKeeper.farmaci
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_dottore_nessun_dottore.*
+import com.example.PillsKeeper.R
 
 
-class dottoreNessunDottore : Fragment(), View.OnClickListener {
+class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
 
     lateinit var navc: NavController
 
@@ -19,18 +19,17 @@ class dottoreNessunDottore : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dottore_nessun_dottore, container, false)
+        return inflater.inflate(R.layout.fragment_farmaci_inserire_un_farmaco2, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        imageButtonReminder5.setOnClickListener(this)
+        view.findViewById<TextView>(R.id.textView9).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        navc?.navigate(R.id.actionToInserireUnDottore)
+        navc?.navigate(R.id.actionToInserireUnFarmaco3)
     }
 }

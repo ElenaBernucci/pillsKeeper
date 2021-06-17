@@ -2,12 +2,11 @@ package com.example.PillsKeeper.model
 
 import java.util.*
 
-class reminder (var CosaDeviFare: String,
-                var orario: Long,
-                var ripetizione: String,
+class reminder (var cosaDeviFare: String,
+                var orarioR: Long,
+                var ripetizioneR: String,
 
-                var volteAlGiorno: String,
-                var dosiInUnaScatola: Int,
-                var scadenza: Date,
+                var volteAlGiornoR: String,
+                var utenteId: String
                 ){
 }

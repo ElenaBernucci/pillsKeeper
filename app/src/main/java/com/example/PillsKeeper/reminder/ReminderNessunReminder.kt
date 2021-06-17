@@ -1,15 +1,16 @@
-package com.example.PillsKeeper
+package com.example.PillsKeeper.reminder
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.PillsKeeper.R
 
-class FarmaciNessunFarmaco : Fragment(), View.OnClickListener {
+class ReminderNessunReminder : Fragment(), View.OnClickListener {
 
     lateinit var navc: NavController
 
@@ -18,18 +19,17 @@ class FarmaciNessunFarmaco : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_farmaci_nessun_farmaco, container, false)
+        return inflater.inflate(R.layout.fragment_reminder_nessun_reminder, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        view.findViewById<ImageButton>(R.id.imageButtonReminder3).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.imageButtonReminder4).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        navc?.navigate(R.id.actionInserireUnFarmaco1)
+        navc?.navigate(R.id.actionInserireReminder)
     }
-
 }

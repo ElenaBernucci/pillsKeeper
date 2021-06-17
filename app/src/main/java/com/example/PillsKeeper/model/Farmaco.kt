@@ -17,6 +17,7 @@ class Farmaco (var nomeFarmaco: String,
 
                var orario: String,
                var ripetizione: String,
-               var imageURL: String){
+               var imageURL: String,
+               var utenteId: String){
 
 }

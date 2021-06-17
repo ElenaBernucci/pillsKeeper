@@ -1,14 +1,11 @@
-package com.example.PillsKeeper
+package com.example.PillsKeeper.farmacia
 
-import android.content.pm.PackageManager
-import android.location.Location
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
+import com.example.PillsKeeper.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -17,23 +14,11 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.tasks.Task
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-
 
 class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
-    private var param1: String? = null
-    private var param2: String? = null
-
     private lateinit var mMap:GoogleMap
     private lateinit var requestlatlng: LatLng
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

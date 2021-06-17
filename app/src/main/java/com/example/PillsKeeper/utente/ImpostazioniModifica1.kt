@@ -1,4 +1,4 @@
-package com.example.PillsKeeper
+package com.example.PillsKeeper.utente
 
 import android.app.Activity
 import android.content.Intent
@@ -11,19 +11,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.fragment_contatti_inserireun_contatto.*
-import kotlinx.android.synthetic.main.fragment_iniziale.*
-import kotlinx.android.synthetic.main.fragment_iniziale.imageButtonReminder
+import com.example.PillsKeeper.R
 import java.io.File
 
 private const val PICK_IMAGE_CODE = 1234
 
-class contattiInserireunContatto : Fragment(), View.OnClickListener {
+class ImpostazioniModifica1 : Fragment() {
 
-    lateinit var navc: NavController
     private var photoUri: Uri? = null
     private lateinit var imagePickText : TextView
     private lateinit var image : ImageView
@@ -33,29 +28,19 @@ class contattiInserireunContatto : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_contatti_inserireun_contatto, container, false)
-        image = view.findViewById(R.id.imageView9)
-        imagePickText = view.findViewById(R.id.textView42)
+        var view =  inflater.inflate(R.layout.fragment_impostazioni_modifica1, container, false)
+        image = view.findViewById(R.id.imageView12)
+        imagePickText = view.findViewById(R.id.textView16)
         imagePickText.setOnClickListener {
             pickImage()
         }
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        navc= Navigation.findNavController(view)
-        textView49.setOnClickListener(this)
-    }
-
     private fun pickImage(){
         val imagePickerIntent = Intent(Intent.ACTION_GET_CONTENT)
         imagePickerIntent.type = "image/*"
         startActivityForResult(imagePickerIntent, PICK_IMAGE_CODE)
-    }
-
-    override fun onClick(v: View?) {
-        navc?.navigate(R.id.actionToContattiContattoSelezionato)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -70,7 +55,5 @@ class contattiInserireunContatto : Fragment(), View.OnClickListener {
                 Toast.makeText(context, "image pick canceled", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
-
 }
