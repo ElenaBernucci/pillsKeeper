@@ -20,6 +20,7 @@ class FirstFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_iniziale, container, false)
     }
 
@@ -38,20 +39,27 @@ class FirstFragment : Fragment(), View.OnClickListener {
 
         when(v?.id){
             R.id.imageButtonReminder -> {
-                navc?.navigate(R.id.actionToLogNonLoggato)
+                navc?.navigate(R.id.iniziale_to_iniziale_accesso)
             }
             R.id.imageButtonFarmaci2 -> {
                 navc?.navigate(R.id.actionToNessunFarmaco)
             }
+
             R.id.imageButtonReminder2 -> {
                 navc?.navigate(R.id.actionToNoReminder)
             }
+
             R.id.imageButtonFarmacia2 -> {
                 navc?.navigate(R.id.actionToFarmaciaNessunaFarmacia)
             }
+
             R.id.imageButtonMedico2 -> {
                 navc?.navigate(R.id.actionToDottoreNessunDottore)
             }
+
         }
+
+
     }
+
 }
