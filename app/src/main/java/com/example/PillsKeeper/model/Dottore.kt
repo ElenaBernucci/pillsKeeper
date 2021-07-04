@@ -2,7 +2,7 @@ package com.example.PillsKeeper.model
 
 import java.util.*
 
-class Dottore (var nomeD: String,
+data class Dottore (var nomeD: String,
                var cognomeD: String,
                var specializzazione: String?,
 

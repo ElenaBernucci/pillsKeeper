@@ -27,4 +27,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Accesso_non_eseguito">Ops, sembra che tu non sia ancora registrato. <br>Premi qui per creare o accedere ad un account.</br></string>
+    <string name="nome_farmaco">Nome Farmaco</string>
+    <string name="dosaggio">Dosaggio</string>
+    <string name="immagine_del_farmaco">Immagine del Farmaco</string>
 </resources>

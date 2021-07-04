@@ -2,19 +2,39 @@ package com.example.PillsKeeper
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.AuthUI.IdpConfig
+import com.firebase.ui.auth.AuthUI.IdpConfig.EmailBuilder
+import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
+import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
+import com.firebase.ui.auth.util.ExtraConstants
+import com.google.firebase.auth.ActionCodeSettings
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_iniziale.*
 
 
 class FirstFragment : Fragment(), View.OnClickListener {
 
     lateinit var navc:NavController
+
+    // [START auth_fui_create_launcher]
+    // See: https://developer.android.com/training/basics/intents/result
+    private val signInLauncher = registerForActivityResult(
+        FirebaseAuthUIActivityResultContract()
+    ) { res ->
+        this.onSignInResult(res)
+    }
+    // [END auth_fui_create_launcher]
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,16 +53,22 @@ class FirstFragment : Fragment(), View.OnClickListener {
         imageButtonReminder2.setOnClickListener(this)
         imageButtonFarmacia2.setOnClickListener(this)
         imageButtonMedico2.setOnClickListener(this)
+
+        val signInIntent = FirebaseAuth.getInstance().currentUser
+        Log.d("getInstance", signInIntent.toString())
     }
 
     override fun onClick(v: View?) {
 
         when(v?.id){
             R.id.imageButtonReminder -> {
-                navc?.navigate(R.id.iniziale_to_iniziale_accesso)
+                createSignInIntent()
             }
             R.id.imageButtonFarmaci2 -> {
-                navc?.navigate(R.id.actionToNessunFarmaco)
+                if (FirebaseAuth.getInstance().currentUser != null)
+                    navc?.navigate(R.id.fromFirstFragmentToFarmaciVisualizza)
+                else
+                    navc?.navigate(R.id.actionToNessunFarmaco)
             }
 
             R.id.imageButtonReminder2 -> {
@@ -56,10 +82,43 @@ class FirstFragment : Fragment(), View.OnClickListener {
             R.id.imageButtonMedico2 -> {
                 navc?.navigate(R.id.actionToDottoreNessunDottore)
             }
-
         }
-
-
     }
 
+    private fun createSignInIntent() {
+        // [START auth_fui_create_intent]
+        // Choose authentication providers
+        val providers = arrayListOf(
+            EmailBuilder().build(),
+            //AuthUI.IdpConfig.PhoneBuilder().build(),
+            IdpConfig.GoogleBuilder().build())
+        //AuthUI.IdpConfig.FacebookBuilder().build(),
+        //AuthUI.IdpConfig.TwitterBuilder().build())
+
+        // Create and launch sign-in intent
+        val signInIntent = AuthUI.getInstance()
+            .createSignInIntentBuilder()
+            .setAvailableProviders(providers)
+            .setLogo(R.mipmap.loghino) // Set logo drawable
+            //.setTheme(R.style.) // Set theme
+            .build()
+        signInLauncher.launch(signInIntent)
+        // [END auth_fui_create_intent]
+    }
+
+    // [START auth_fui_result]
+    private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
+        val response = result.idpResponse
+        if (result.resultCode == AppCompatActivity.RESULT_OK) {
+            // Successfully signed in
+            val user = FirebaseAuth.getInstance().currentUser
+            // ...
+        } else {
+            // Sign in failed. If response is null the user canceled the
+            // sign-in flow using the back button. Otherwise check
+            // response.getError().getErrorCode() and handle the error.
+            // ...
+        }
+    }
+    // [END auth_fui_result]
 }

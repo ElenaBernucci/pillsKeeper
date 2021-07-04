@@ -30,11 +30,13 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemClickListener{
         firestoreDb = FirebaseFirestore.getInstance()
         firebaseStorage = FirebaseStorage.getInstance().reference
 
+        @Suppress("DEPRECATION")
         val handler = Handler()
         handler.postDelayed({
             val intent = Intent(this@MainActivity, MenuIniziale::class.java)
             startActivity(intent)
-        }, 3000)
+            finish()
+        }, 2500)
 
     }
 
