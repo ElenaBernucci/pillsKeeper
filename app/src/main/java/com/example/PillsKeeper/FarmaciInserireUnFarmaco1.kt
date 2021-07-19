@@ -1,4 +1,4 @@
-package com.example.PillsKeeper.farmaci
+package com.example.PillsKeeper
 
 import android.app.Activity
 import android.content.Intent
@@ -14,7 +14,6 @@ import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
-import com.example.PillsKeeper.R
 import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco1.*
 import java.io.File
 

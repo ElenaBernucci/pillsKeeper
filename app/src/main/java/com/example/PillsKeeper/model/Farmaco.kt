@@ -1,10 +1,9 @@
 package com.example.PillsKeeper.model
-;
 
 import java.net.URL
 import java.util.*
 
-class Farmaco (var nomeFarmaco: String,
+data class Farmaco (var nomeFarmaco: String,
                var nomeCommerciale: String,
                var casaProduttrice: String,
 
@@ -17,7 +16,7 @@ class Farmaco (var nomeFarmaco: String,
 
                var orario: String,
                var ripetizione: String,
-               var imageURL: String,
+               var imageURL: Int,
                var utenteId: String){
 
 }

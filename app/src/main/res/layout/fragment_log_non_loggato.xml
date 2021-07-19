@@ -7,6 +7,33 @@
     android:layout_height="match_parent"
     tools:context=".utente.logNonLoggato">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="130dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="48dp"
+        android:src="@mipmap/account"
+        app:layout_constraintBottom_toTopOf="@+id/accediesistente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <TextView
+        android:id="@+id/accediesistente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Accedi ad un account esistente"
+        android:textColor="@color/blu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
     <TextView
         android:id="@+id/textView50"
         android:layout_width="wrap_content"
@@ -17,32 +44,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore3" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="130dp"
-        android:layout_height="138dp"
-        android:layout_marginTop="236dp"
-        android:src="@mipmap/account"
-        app:layout_constraintEnd_toEndOf="@+id/textViewModificaDottore2"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="@+id/textViewModificaDottore2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewModificaDottore2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Accedi ad un account esistente"
-        android:textColor="@color/blu"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textViewModificaDottore3"
-        app:layout_constraintStart_toStartOf="@+id/textViewModificaDottore3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore3"
+        app:layout_constraintVertical_bias="0.227" />
 
     <TextView
         android:id="@+id/textViewModificaDottore3"
@@ -54,8 +59,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore2"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintTop_toBottomOf="@+id/accediesistente"
+        app:layout_constraintVertical_bias="0.039" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

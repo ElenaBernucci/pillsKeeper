@@ -22,57 +22,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Non salvare"
-        android:textColor="@color/blu"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="50dp"
         android:text="Dati personali:"
         android:textColor="@color/azzurro"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
-
-    <EditText
-        android:id="@+id/editTextNomeContatto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/text_view_border"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName"
-        android:padding="4dp"
-        android:shadowColor="#000000"
-        android:singleLine="false"
-        android:textColor="#454773"
-        android:textColorHighlight="#454773"
-        android:textColorHint="#454773"
-        android:textColorLink="#454773"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
     <EditText
         android:id="@+id/editTextNomeContatto5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/text_view_border"
         android:ems="10"
         android:hint="Numero di telefono"
@@ -86,6 +52,7 @@
         android:textColorLink="#454773"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
@@ -93,7 +60,7 @@
         android:id="@+id/editTextCognomeContatto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/text_view_border"
         android:ems="10"
         android:hint="Cognome"
@@ -107,14 +74,59 @@
         android:textColorLink="#454773"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNomeContatto" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_view_border"
+        android:ems="10"
+        android:hint="Mail"
+        android:inputType="textEmailAddress"
+        android:padding="4dp"
+        android:shadowColor="#000000"
+        android:singleLine="false"
+        android:textColor="#454773"
+        android:textColorHighlight="#454773"
+        android:textColorHint="#454773"
+        android:textColorLink="#454773"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextParentela" />
+
+    <EditText
+        android:id="@+id/editTextNomeContatto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_view_border"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:padding="4dp"
+        android:shadowColor="#000000"
+        android:singleLine="false"
+        android:textColor="#454773"
+        android:textColorHighlight="#454773"
+        android:textColorHint="#454773"
+        android:textColorLink="#454773"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
     <EditText
         android:id="@+id/editTextParentela"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/text_view_border"
         android:ems="10"
         android:hint="Parentela"
@@ -128,6 +140,7 @@
         android:textColorLink="#454773"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCognomeContatto" />
 
@@ -146,24 +159,17 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNomeContatto5"
         app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
+    <TextView
+        android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/text_view_border"
-        android:ems="10"
-        android:hint="Mail"
-        android:inputType="textEmailAddress"
-        android:padding="4dp"
-        android:shadowColor="#000000"
-        android:singleLine="false"
-        android:textColor="#454773"
-        android:textColorHighlight="#454773"
-        android:textColorHint="#454773"
-        android:textColorLink="#454773"
+        android:layout_marginBottom="16dp"
+        android:text="Non salvare"
+        android:textColor="@color/blu"
+        android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextParentela" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.PillsKeeper.farmaci
+package com.example.PillsKeeper
 
 import android.os.Bundle
 import android.view.LayoutInflater

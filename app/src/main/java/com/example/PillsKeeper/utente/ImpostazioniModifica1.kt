@@ -46,7 +46,7 @@ class ImpostazioniModifica1 : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        avantimodifica.setOnClickListener(this)
+        textView19.setOnClickListener(this)
     }
 
     private fun pickImage(){

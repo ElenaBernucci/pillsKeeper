@@ -26,12 +26,12 @@
             android:id="@+id/actionToFarmaciaNessunaFarmacia"
             app:destination="@id/farmaciaNessunaFarmacia" />
         <action
-            android:id="@+id/actionToLogNonLoggato"
-            app:destination="@id/logNonLoggato" />
+            android:id="@+id/fromFirstFragmentToFarmaciVisualizza"
+            app:destination="@id/farmaciVisualizza" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
-        android:name="com.example.PillsKeeper.farmaci.FarmaciNessunFarmaco"
+        android:name="com.example.PillsKeeper.FarmaciNessunFarmaco"
         android:label="fragment_farmaci_nessun_farmaco"
         tools:layout="@layout/fragment_farmaci_nessun_farmaco" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/faraciInserireUnFarmaco1"
-        android:name="com.example.PillsKeeper.farmaci.FarmaciInserireUnFarmaco1"
+        android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco1"
         android:label="fragment_faraci_inserire_un_farmaco1"
         tools:layout="@layout/fragment_farmaci_inserire_un_farmaco1" >
         <action
@@ -49,17 +49,17 @@
     </fragment>
     <fragment
         android:id="@+id/farmaciInserireUnFarmaco2"
-        android:name="com.example.PillsKeeper.farmaci.FarmaciInserireUnFarmaco2"
+        android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco2"
         android:label="fragment_farmaci_inserire_un_farmaco2"
         tools:layout="@layout/fragment_farmaci_inserire_un_farmaco2" >
         <action
-            android:id="@+id/actionToInserireUnFarmaco3"
-            app:destination="@id/farmaciInserireUnFarmaco3" />
+            android:id="@+id/actionToFarmaciVisualizza"
+            app:destination="@id/farmaciVisualizza" />
     </fragment>
 
     <fragment
         android:id="@+id/reminderNessunReminder"
-        android:name="com.example.PillsKeeper.reminder.ReminderNessunReminder"
+        android:name="com.example.PillsKeeper.ReminderNessunReminder"
         android:label="fragment_reminder_nessun_reminder"
         tools:layout="@layout/fragment_reminder_nessun_reminder" >
         <action
@@ -68,12 +68,12 @@
     </fragment>
     <fragment
         android:id="@+id/reminderInserireReminder"
-        android:name="com.example.PillsKeeper.reminder.ReminderInserireReminder"
+        android:name="com.example.PillsKeeper.ReminderInserireReminder"
         android:label="fragment_reminder_inserire_reminder"
         tools:layout="@layout/fragment_reminder_inserire_reminder" />
     <fragment
         android:id="@+id/contattiNessunContatto"
-        android:name="com.example.PillsKeeper.contatti.ContattiNessunContatto"
+        android:name="com.example.PillsKeeper.ContattiNessunContatto"
         android:label="fragment_contatti_nessun_contatto"
         tools:layout="@layout/fragment_contatti_nessun_contatto" >
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/contattiInserireunContatto"
-        android:name="com.example.PillsKeeper.contatti.contattiInserireunContatto"
+        android:name="com.example.PillsKeeper.contattiInserireunContatto"
         android:label="fragment_contatti_inserireun_contatto"
         tools:layout="@layout/fragment_contatti_inserireun_contatto" >
         <action
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/dottoreNessunDottore"
-        android:name="com.example.PillsKeeper.dottore.dottoreNessunDottore"
+        android:name="com.example.PillsKeeper.dottoreNessunDottore"
         android:label="fragment_dottore_nessun_dottore"
         tools:layout="@layout/fragment_dottore_nessun_dottore" >
         <action
@@ -100,33 +100,36 @@
     </fragment>
     <fragment
         android:id="@+id/dottoreInserireUnDottore"
-        android:name="com.example.PillsKeeper.dottore.dottoreInserireUnDottore"
+        android:name="com.example.PillsKeeper.dottoreInserireUnDottore"
         android:label="fragment_dottore_inserire_un_dottore"
         tools:layout="@layout/fragment_dottore_inserire_un_dottore" />
     <fragment
         android:id="@+id/farmaciaNessunaFarmacia"
-        android:name="com.example.PillsKeeper.farmacia.FarmaciaNessunaFarmacia"
+        android:name="com.example.PillsKeeper.FarmaciaNessunaFarmacia"
         android:label="fragment_farmacia_nessuna_farmacia"
         tools:layout="@layout/fragment_farmacia_nessuna_farmacia" />
     <fragment
         android:id="@+id/contattiContattoSelezionato"
-        android:name="com.example.PillsKeeper.contatti.contattiContattoSelezionato"
+        android:name="com.example.PillsKeeper.contattiContattoSelezionato"
         android:label="fragment_contatti_contatto_selezionato"
         tools:layout="@layout/fragment_contatti_contatto_selezionato" />
     <fragment
-        android:id="@+id/farmaciInserireUnFarmaco3"
-        android:name="com.example.PillsKeeper.farmaci.farmaciInserireUnFarmaco3"
-        android:label="fragment_farmaci_inserire_un_farmaco3"
-        tools:layout="@layout/fragment_farmaci_inserire_un_farmaco3" >
-        <action
-            android:id="@+id/actionToFarmaciConDeiFarmaci"
-            app:destination="@id/farmaciVisualizza" />
-    </fragment>
-    <fragment
         android:id="@+id/farmaciVisualizza"
-        android:name="com.example.PillsKeeper.farmaci.FarmaciVisualizza"
+        android:name="com.example.PillsKeeper.FarmaciVisualizza"
         android:label="fragment_farmaci_visualizza"
         tools:layout="@layout/fragment_farmaci_visualizza" />
+    <fragment
+        android:id="@+id/impostazioniModifica1"
+        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica1"
+        android:label="ImpostazioniModifica1" >
+        <action
+            android:id="@+id/actionToImpostazioniModifica2"
+            app:destination="@id/farmaciInserireUnFarmaco22" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmaciInserireUnFarmaco22"
+        android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco2"
+        android:label="FarmaciInserireUnFarmaco2" />
     <fragment
         android:id="@+id/logNonLoggato"
         android:name="com.example.PillsKeeper.utente.logNonLoggato"
@@ -144,16 +147,4 @@
             android:id="@+id/actionToImpostazioniModifica1"
             app:destination="@id/impostazioniModifica1" />
     </fragment>
-    <fragment
-        android:id="@+id/impostazioniModifica1"
-        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica1"
-        android:label="ImpostazioniModifica1" >
-        <action
-            android:id="@+id/actionToImpostazioniModifica2"
-            app:destination="@id/impostazioniModifica2" />
-    </fragment>
-    <fragment
-        android:id="@+id/impostazioniModifica2"
-        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica2"
-        android:label="ImpostazioniModifica2" />
 </navigation>
