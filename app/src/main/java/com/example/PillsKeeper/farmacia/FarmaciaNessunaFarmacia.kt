@@ -27,7 +27,7 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_farmacia_nessuna_farmacia, container, false)
 
-        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        val mapFragment = childFragmentManager.findFragmentById(R.id.requestMap) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
         var fusedLocationProviderClient: FusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
@@ -49,12 +49,10 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 101)
         }
 
-
     }
 */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
         mMap.clear()
         mMap.addMarker(MarkerOptions().position(requestlatlng).title("Request"))
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(requestlatlng, 16F))
