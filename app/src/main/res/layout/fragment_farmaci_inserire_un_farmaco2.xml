@@ -12,6 +12,20 @@
         android:layout_height="wrap_content"
         tools:context=".FarmaciInserireUnFarmaco2">
 
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Quanto ne prendi?"
+            android:textColor="#8BD9EA"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <EditText
             android:id="@+id/editTextDose"
             android:layout_width="wrap_content"
@@ -28,7 +42,7 @@
             android:singleLine="false"
             android:textColor="#454773"
             android:textColorHighlight="#454773"
-            android:textColorHint="#454773"
+            android:textColorHint="#99454773"
             android:textColorLink="#454773"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView57"
@@ -48,6 +62,134 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/materialButtonGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextDose2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_half_playstore" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_one_playstore" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_two_playstore" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/frequenzaFarmaco"
+            android:layout_width="332dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTime3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/mattina"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_morning_playstore" />
+
+            <Button
+                android:id="@+id/mezzogiorno"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_midday_playstore" />
+
+            <Button
+                android:id="@+id/sera"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_night_playstore" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="69dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="126dp"
+            android:gravity="center"
+            android:text="Mezza"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="71dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
+            android:text="Una"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="87dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="Piú di una"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/materialButtonGroup" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Altra dose:"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/editTextDose2"
+            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
         <EditText
             android:id="@+id/editTextTime3"
             android:layout_width="wrap_content"
@@ -57,10 +199,11 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/text_view_border"
             android:ems="10"
+            android:hint="Ora precisa"
             android:inputType="time"
             android:padding="4dp"
-            android:text="Ora precisa"
             android:textColor="@color/blu"
+            android:textColorHint="#99454773"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/editTextDose"
@@ -100,7 +243,7 @@
             android:id="@+id/textView53"
             android:layout_width="95dp"
             android:layout_height="26dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="14dp"
             android:layout_marginEnd="28dp"
             android:layout_marginRight="28dp"
             android:gravity="center_horizontal"
@@ -109,22 +252,24 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonOne6" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView52"
+            app:layout_constraintTop_toBottomOf="@+id/frequenzaFarmaco" />
 
         <TextView
             android:id="@+id/textView52"
             android:layout_width="109dp"
             android:layout_height="23dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="120dp"
             android:gravity="center_horizontal"
             android:text="Mezzogiorno"
             android:textColor="#454773"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView53"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView51"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonOne5" />
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
             android:id="@+id/textView51"
@@ -132,70 +277,16 @@
             android:layout_height="25dp"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
+            android:layout_marginBottom="2dp"
             android:gravity="center_horizontal"
             android:text="Mattina"
             android:textColor="#454773"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonOne4" />
-
-        <ImageButton
-            android:id="@+id/imageButtonOne5"
-            android:layout_width="95dp"
-            android:layout_height="92dp"
-            android:layout_marginTop="24dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:scaleType="fitStart"
-            android:tint="#00FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/imageButtonOne6"
-            app:layout_constraintHorizontal_bias="0.513"
-            app:layout_constraintStart_toEndOf="@+id/imageButtonOne4"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:srcCompat="@mipmap/midday" />
-
-        <ImageButton
-            android:id="@+id/imageButtonOne4"
-            android:layout_width="95dp"
-            android:layout_height="88dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="28dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:scaleType="fitStart"
-            android:tint="#00FFFFFF"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:srcCompat="@mipmap/morning" />
-
-        <ImageButton
-            android:id="@+id/imageButtonOne6"
-            android:layout_width="93dp"
-            android:layout_height="92dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:scaleType="fitStart"
-            android:tint="#00FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:srcCompat="@mipmap/night" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView52"
+            app:layout_constraintEnd_toStartOf="@+id/textView52"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView7"
@@ -210,20 +301,6 @@
             app:layout_constraintHorizontal_bias="0.522"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/switch2" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Quanto ne prendi?"
-            android:textColor="#8BD9EA"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView9"
@@ -257,66 +334,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextDose2" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="71dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Una"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.485"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonOne2" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="87dp"
-            android:layout_height="22dp"
-            android:layout_marginTop="3dp"
-            android:gravity="center"
-            android:text="Piú di una"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
-            app:layout_constraintStart_toEndOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonMore2" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="69dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Mezza"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView14"
-            app:layout_constraintHorizontal_bias="0.468"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButtonHalf2" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Altra dose:"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/editTextDose2"
-            app:layout_constraintHorizontal_bias="0.448"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
         <EditText
             android:id="@+id/editTextDose2"
             android:layout_width="wrap_content"
@@ -333,7 +350,7 @@
             android:singleLine="false"
             android:textColor="#454773"
             android:textColorHighlight="#454773"
-            android:textColorHint="#454773"
+            android:textColorHint="#99454773"
             android:textColorLink="#454773"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -344,76 +361,14 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="197dp"
             android:layout_height="23dp"
-            android:layout_marginStart="107dp"
-            android:layout_marginLeft="107dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="107dp"
-            android:layout_marginRight="107dp"
-            android:progress="99"
+            android:progress="90"
             android:progressTint="@color/azzurro"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
             app:layout_constraintVertical_bias="1.0" />
-
-        <ImageButton
-            android:id="@+id/imageButtonOne2"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
-            android:layout_marginTop="40dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:scaleType="fitStart"
-            android:tint="#00FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.483"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:srcCompat="@mipmap/one" />
-
-        <ImageButton
-            android:id="@+id/imageButtonMore2"
-            android:layout_width="112dp"
-            android:layout_height="101dp"
-            android:layout_marginTop="24dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:scaleType="fitStart"
-            android:tint="#00FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.453"
-            app:layout_constraintStart_toEndOf="@+id/imageButtonOne2"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:srcCompat="@mipmap/two" />
-
-        <ImageButton
-            android:id="@+id/imageButtonHalf2"
-            android:layout_width="70dp"
-            android:layout_height="76dp"
-            android:layout_marginTop="40dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingTop="0dp"
-            android:paddingRight="0dp"
-            android:scaleType="fitStart"
-            android:tint="#00FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/imageButtonOne2"
-            app:layout_constraintHorizontal_bias="0.463"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:srcCompat="@mipmap/half" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

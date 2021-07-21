@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.PillsKeeper.adapters.farmaciAdapter
+import com.example.PillsKeeper.model.FarmacoMinimal
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.AuthUI.IdpConfig
 import com.firebase.ui.auth.AuthUI.IdpConfig.EmailBuilder
@@ -20,12 +23,20 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.firebase.ui.auth.util.ExtraConstants
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.fragment_farmaci_visualizza.*
 import kotlinx.android.synthetic.main.fragment_iniziale.*
 
 
 class FirstFragment : Fragment(), View.OnClickListener {
 
     lateinit var navc:NavController
+    val user = Firebase.auth.currentUser
+    val uid = user?.uid
+    val db = Firebase.firestore
 
     // [START auth_fui_create_launcher]
     // See: https://developer.android.com/training/basics/intents/result
@@ -54,8 +65,16 @@ class FirstFragment : Fragment(), View.OnClickListener {
         imageButtonFarmacia2.setOnClickListener(this)
         imageButtonMedico2.setOnClickListener(this)
 
-        val signInIntent = FirebaseAuth.getInstance().currentUser
-        Log.d("getInstance", signInIntent.toString())
+        val city = hashMapOf(
+            "name" to "Los Angeles",
+            "state" to "CA",
+            "country" to "USA"
+        )
+
+        /*db.collection("Utenti").document(uid.toString()).collection("farmacoTest").document("farm").set(city)
+            .addOnSuccessListener { Log.d("Firestore", "DocumentSnapshot successfully written!") }
+            .addOnFailureListener { e -> Log.w("Firestore", "Error writing document", e) }
+        Log.d("getInstance", uid.toString())*/
     }
 
     override fun onClick(v: View?) {
@@ -65,10 +84,18 @@ class FirstFragment : Fragment(), View.OnClickListener {
                 createSignInIntent()
             }
             R.id.imageButtonFarmaci2 -> {
-                if (FirebaseAuth.getInstance().currentUser != null)
-                    navc?.navigate(R.id.fromFirstFragmentToFarmaciVisualizza)
-                else
-                    navc?.navigate(R.id.actionToNessunFarmaco)
+                db.collection("bellaRaga").document("gnegne").collection("fammacoTeste")
+                    .get()
+                    .addOnSuccessListener { result ->
+                        if (result.isEmpty){
+                            navc?.navigate(R.id.actionToNessunFarmaco)
+                        } else{
+                            navc?.navigate(R.id.fromFirstFragmentToFarmaciVisualizza)
+                        }
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(requireContext(), "Error Loading Database", Toast.LENGTH_LONG).show()
+                    }
             }
 
             R.id.imageButtonReminder2 -> {

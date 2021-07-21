@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemClickListener{
 
     }
 
-    private fun uploadFarmaco(uri:Uri?){
+    /*private fun uploadFarmaco(uri:Uri?){
         // CONTROLLI CAMPI
 
         if(uri != null) {
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() , AdapterView.OnItemClickListener{
                     )
                 }
         }
-    }
+    }*/
 
     private fun getFileExtension(uri: Uri) : String?{
         return MimeTypeMap.getSingleton().getExtensionFromMimeType(this.contentResolver?.getType(uri))

@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.PillsKeeper" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue_700</item>
+        <item name="colorPrimaryVariant">@color/blue_500</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">@color/pink_200</item>
+        <item name="colorSecondaryVariant">@color/pink_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -23,8 +23,18 @@
 
     <style name="Theme.PillsKeeper.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <color name="purple_500">#B533EC</color>
-    <color name="purple_700">#673AB7</color>
-    <color name="teal_200">#32F7C9</color>
-    <color name="teal_700">#28AFAB</color>
+    <style name="ToggleButtonWithIconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:minHeight">80dp</item>
+    </style>
+
+    <color name="blue_500">#B8E1F1</color>
+    <color name="blue_700">#454773</color>
+    <color name="pink_200">#F08486</color>
+    <color name="pink_700">#A3494B</color>
 </resources>

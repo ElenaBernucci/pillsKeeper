@@ -55,6 +55,27 @@
         <action
             android:id="@+id/actionToFarmaciVisualizza"
             app:destination="@id/farmaciVisualizza" />
+        <argument
+            android:name="NomeFarmaco"
+            app:argType="string" />
+        <argument
+            android:name="NomeCommerciale"
+            app:argType="string" />
+        <argument
+            android:name="CasaProduttrice"
+            app:argType="string" />
+        <argument
+            android:name="Dosaggio"
+            app:argType="integer" />
+        <argument
+            android:name="NumDosi"
+            app:argType="integer" />
+        <argument
+            android:name="TextDate"
+            app:argType="string" />
+        <argument
+            android:name="Image"
+            app:argType="string" />
     </fragment>
 
     <fragment

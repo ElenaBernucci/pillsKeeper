@@ -1,10 +1,15 @@
-package com.example.PillsKeeper.farmacia
+package com.example.PillsKeeper
 
+import android.Manifest
+import android.app.Activity
+import android.content.pm.PackageManager
+import android.location.Location
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
 import com.example.PillsKeeper.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -14,11 +19,13 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.tasks.Task
 
 class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
     private lateinit var mMap:GoogleMap
     private lateinit var requestlatlng: LatLng
+    private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,27 +37,27 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
         val mapFragment = childFragmentManager.findFragmentById(R.id.requestMap) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        var fusedLocationProviderClient: FusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
+        fusedLocationProviderClient= LocationServices.getFusedLocationProviderClient(context)
 
-      //  fetchLocation()
+        fetchLocation()
         return view
     }
 
-    /*private fun fetchLocation() {
+    private fun fetchLocation() {
 
-        val task:Task<Location> = FusedLocationProviderClient.lastLocation
+        val task: Task<Location> = fusedLocationProviderClient.lastLocation
 
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+        if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)
             != PackageManager.PERMISSION_GRANTED && ActivityCompat
-                    .checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+                    .checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED )
         {
 
-            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 101)
+            ActivityCompat.requestPermissions(requireContext() as Activity, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 101)
         }
 
     }
-*/
+
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         mMap.clear()

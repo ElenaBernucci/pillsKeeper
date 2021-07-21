@@ -1,6 +1,7 @@
 package com.example.PillsKeeper.model
 
 import java.net.URL
+import java.time.LocalDate
 import java.util.*
 
 data class Farmaco (var nomeFarmaco: String,
@@ -9,14 +10,13 @@ data class Farmaco (var nomeFarmaco: String,
 
                var dosaggio: Int,
                var dosiInUnaScatola: Int,
-               var scadenza: Date,
+               var scadenza: LocalDate,
 
                var quantoNePrendi: String,
                var farmacoContinuativo: Boolean,
 
                var orario: String,
                var ripetizione: String,
-               var imageURL: Int,
-               var utenteId: String){
+               var imageURL: Int){
 
 }
