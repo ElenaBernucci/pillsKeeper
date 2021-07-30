@@ -16,7 +16,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/map_key" />
+            android:value="AIzaSyDBdaRlOOR6a0xlrESgoFy1g_r_16475zU" />
 
 
         <activity android:name=".MenuIniziale" />
