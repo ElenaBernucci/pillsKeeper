@@ -29,7 +29,7 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
     private lateinit var mMap:GoogleMap
     private lateinit var requestlatlng: LatLng
-    private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var searchBar : SearchView
     private var addressList: MutableList<Address>? = null
     private lateinit var geocoder: Geocoder
@@ -39,7 +39,7 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_farmacia_nessuna_farmacia, container, false)
+        val view = inflater.inflate(R.layout.fragment_farmacia_nessuna_farmacia, container, false)
 
         searchBar = view.findViewById(R.id.requestSearch)
 
@@ -48,18 +48,18 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
         searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                var location: String = searchBar.query.toString()
+                val location: String = searchBar.query.toString()
                 addressList = null
 
-                if (location != null || location != "") {
+                if (location != "") {
                     geocoder = Geocoder(context)
                     try {
                         addressList = geocoder.getFromLocationName(location, 1)
                     } catch (e: IOException) {
                         e.printStackTrace()
                     }
-                    var address = addressList?.get(0)
-                    requestlatlng = LatLng(address!!.latitude!!, address!!.longitude)
+                    val address = addressList?.get(0)
+                    requestlatlng = LatLng(address!!.latitude, address.longitude)
 
                     mMap.clear()
                     mMap.addMarker(MarkerOptions().position(requestlatlng).title(location))
@@ -74,18 +74,15 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
 
         })
 
-        fusedLocationProviderClient= LocationServices.getFusedLocationProviderClient(context)
+        fusedLocationClient= LocationServices.getFusedLocationProviderClient(context)
 
         fetchLocation()
-
-
 
         return view
     }
 
     private fun fetchLocation() {
 
-        val task: Task<Location> = fusedLocationProviderClient.lastLocation
 
         if (ActivityCompat.checkSelfPermission(requireContext(),
                 Manifest.permission.ACCESS_FINE_LOCATION)
@@ -95,17 +92,36 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
                     != PackageManager.PERMISSION_GRANTED ) {
 
             ActivityCompat.requestPermissions(requireContext() as Activity, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 101)
+            return
 
         }
 
-        //FETCH LATLNG POSITION
+        fusedLocationClient.lastLocation
+            .addOnSuccessListener { location : Location? ->
+                if (location != null) {
+                    val mapFragment = childFragmentManager
+                        .findFragmentById(R.id.requestMap) as SupportMapFragment?
+                    mapFragment?.getMapAsync(this)
+                    drawMarker(LatLng(location.latitude, location.longitude))
+                }
+            }
 
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        mMap.clear()
+        /*mMap.clear()
         mMap.addMarker(MarkerOptions().position(LatLng(45.464664,9.188540)).title("Milan"))
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(45.464664,9.188540), 16F))
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(45.464664,9.188540), 16F))*/
+
+        //val latlong = LatLng(posizione.latitude, posizione.longitude)
+
+    }
+
+    private fun drawMarker(latlong : LatLng){
+
+        mMap.animateCamera(CameraUpdateFactory.newLatLng(latlong))
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlong, 16F))
+        mMap.addMarker(MarkerOptions().position(LatLng(latlong.latitude,latlong.longitude)).title("Current position"))
     }
 }

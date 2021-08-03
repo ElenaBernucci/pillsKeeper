@@ -26,44 +26,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editTextDose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/text_view_border"
-            android:ems="10"
-            android:hint="Ripetizione"
-            android:inputType="textPersonName"
-            android:padding="4dp"
-            android:shadowColor="#000000"
-            android:singleLine="false"
-            android:textColor="#454773"
-            android:textColorHighlight="#454773"
-            android:textColorHint="#99454773"
-            android:textColorLink="#454773"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView57"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <TextView
-            android:id="@+id/textView64"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Quando:"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/editTextDose"
-            app:layout_constraintHorizontal_bias="0.478"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView54" />
-
         <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/materialButtonGroup"
+            android:id="@+id/numeroPerDose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -93,40 +57,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_two_playstore" />
-
-        </com.google.android.material.button.MaterialButtonToggleGroup>
-
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/frequenzaFarmaco"
-            android:layout_width="332dp"
-            android:layout_height="65dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTime3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:singleSelection="true">
-
-            <Button
-                android:id="@+id/mattina"
-                style="@style/ToggleButtonWithIconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:icon="@drawable/ic_morning_playstore" />
-
-            <Button
-                android:id="@+id/mezzogiorno"
-                style="@style/ToggleButtonWithIconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:icon="@drawable/ic_midday_playstore" />
-
-            <Button
-                android:id="@+id/sera"
-                style="@style/ToggleButtonWithIconOnly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:icon="@drawable/ic_night_playstore" />
 
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -173,7 +103,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/materialButtonGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/numeroPerDose" />
 
         <TextView
             android:id="@+id/textView15"
@@ -191,85 +121,92 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <EditText
-            android:id="@+id/editTextTime3"
+            android:id="@+id/editTextDose2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/text_view_border"
             android:ems="10"
-            android:hint="Ora precisa"
-            android:inputType="time"
+            android:hint="Dose precisa"
+            android:inputType="number"
             android:padding="4dp"
-            android:textColor="@color/blu"
+            android:shadowColor="#000000"
+            android:singleLine="false"
+            android:textColor="#454773"
+            android:textColorHighlight="#454773"
             android:textColorHint="#99454773"
+            android:textColorLink="#454773"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch2"
+            android:layout_width="321dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="12dp"
+            android:text="É un farmaco continuativo:"
+            android:textColor="@color/blu"
+            android:textColorHighlight="@color/blu"
+            android:textColorHint="@color/blu"
+            android:textColorLink="@color/blu"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextDose"
-            app:layout_constraintEnd_toEndOf="parent" />
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.422"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDose2" />
 
         <TextView
-            android:id="@+id/textView57"
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Non salvare"
-            android:textColor="@color/blu"
+            android:text="Quando devi prenderlo:"
+            android:textColor="@color/azzurro"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintHorizontal_bias="0.522"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView64" />
+            app:layout_constraintTop_toBottomOf="@+id/switch2" />
 
-        <TextView
-            android:id="@+id/textView54"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="16dp"
-            android:text="Altro orario:"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTime3"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView52" />
-
-        <TextView
-            android:id="@+id/textView53"
-            android:layout_width="95dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
-            android:gravity="center_horizontal"
-            android:text="Sera"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/frequenzaFarmaco"
+            android:layout_width="332dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTime3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView52"
-            app:layout_constraintTop_toBottomOf="@+id/frequenzaFarmaco" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:singleSelection="true">
 
-        <TextView
-            android:id="@+id/textView52"
-            android:layout_width="109dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="120dp"
-            android:gravity="center_horizontal"
-            android:text="Mezzogiorno"
-            android:textColor="#454773"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView53"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView51"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            <Button
+                android:id="@+id/mattina"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_morning_playstore" />
+
+            <Button
+                android:id="@+id/mezzogiorno"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_midday_playstore" />
+
+            <Button
+                android:id="@+id/sera"
+                style="@style/ToggleButtonWithIconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_night_playstore" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <TextView
             android:id="@+id/textView51"
@@ -289,18 +226,132 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Quando devi prenderlo:"
-            android:textColor="@color/azzurro"
+            android:id="@+id/textView52"
+            android:layout_width="109dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="118dp"
+            android:gravity="center_horizontal"
+            android:text="Mezzogiorno"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView53"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView51"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="95dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:gravity="center_horizontal"
+            android:text="Sera"
+            android:textColor="#454773"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView52"
+            app:layout_constraintTop_toBottomOf="@+id/frequenzaFarmaco" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="32dp"
+            android:text="Altro orario:"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/editTextTime3"
+            app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+        <EditText
+            android:id="@+id/editTextTime3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/text_view_border"
+            android:ems="10"
+            android:hint="Ora precisa"
+            android:inputType="time"
+            android:padding="4dp"
+            android:textColor="@color/blu"
+            android:textColorHint="#99454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextDose"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Quando:"
+            android:textColor="#454773"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/editTextDose"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+        <EditText
+            android:id="@+id/editTextDose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/text_view_border"
+            android:ems="10"
+            android:hint="Ripetizione"
+            android:inputType="numberDecimal"
+            android:padding="4dp"
+            android:shadowColor="#000000"
+            android:singleLine="false"
+            android:textColor="#454773"
+            android:textColorHighlight="#454773"
+            android:textColorHint="#99454773"
+            android:textColorLink="#454773"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerFrequenza"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerFrequenza"
+            android:background="@drawable/spinner_style"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView57"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Non salvare"
+            android:textColor="@color/blu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView64" />
 
         <TextView
             android:id="@+id/textView9"
@@ -315,46 +366,6 @@
             app:layout_constraintHorizontal_bias="0.554"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView57" />
-
-        <Switch
-            android:id="@+id/switch2"
-            android:layout_width="321dp"
-            android:layout_height="21dp"
-            android:layout_marginTop="12dp"
-            android:text="É un farmaco continuativo:"
-            android:textColor="@color/blu"
-            android:textColorHighlight="@color/blu"
-            android:textColorHint="@color/blu"
-            android:textColorLink="@color/blu"
-            android:textSize="18sp"
-            android:textStyle="bold"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.422"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextDose2" />
-
-        <EditText
-            android:id="@+id/editTextDose2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/text_view_border"
-            android:ems="10"
-            android:hint="Dose precisa"
-            android:inputType="textPersonName"
-            android:padding="4dp"
-            android:shadowColor="#000000"
-            android:singleLine="false"
-            android:textColor="#454773"
-            android:textColorHighlight="#454773"
-            android:textColorHint="#99454773"
-            android:textColorLink="#454773"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <ProgressBar
             android:id="@+id/progressBar"

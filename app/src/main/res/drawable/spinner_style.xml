@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- The first set of items: set the border -->
+    <item>
+        <shape>
+            <!-- Set the border line width and color -->
+            <stroke
+                android:width="1dp"
+                android:color="#454773" >
+            </stroke>
+            <!-- Set the number of round angles -->
+            <corners android:radius="4dp" />
+            <!-- Set the background color -->
+            <solid android:color="#ffffff" />
+            <!-- padding: set margins -->
+            <padding
+                android:bottom="5dp"
+                android:left="5dp"
+                android:right="5dp"
+                android:top="5dp" >
+            </padding>
+        </shape>
+    </item>
+
+    <!-- The second group of items: set the spinner arrow picture (replace the default arrow) -->
+    <item>
+        <!-- bitmap.gravity: Set the position of the spinner's arrow -->
+        <!-- bitmap.src: Set the image resource to replace the arrow of the original spinner -->
+        <bitmap
+            android:gravity="end"
+            android:src="@drawable/ic_arrow_image">
+        </bitmap>
+    </item>
+</layer-list>
