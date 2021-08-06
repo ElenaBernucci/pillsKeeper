@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/drawable/icona_farmacia_mappa.xml" value="0.3828125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/drawable/icona_mappa_farmacia_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmacia_nessuna_farmacia.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/mipmap-anydpi-v26/icona_mappa_farmacia.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco1.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco2.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmacia_nessuna_farmacia.xml" value="0.1" />
