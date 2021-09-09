@@ -17,7 +17,7 @@ import com.example.PillsKeeper.model.FarmacoMinimal
 import kotlinx.android.synthetic.main.farmaci_row.view.*
 
 
-class farmaciAdapter (var context: Context, private val list: List<FarmacoMinimal>) :RecyclerView.Adapter<farmaciAdapter.ViewHolder>() {
+class farmaciAdapter (var context: Context, private val list: List<Farmaco>) :RecyclerView.Adapter<farmaciAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -45,9 +45,9 @@ class farmaciAdapter (var context: Context, private val list: List<FarmacoMinima
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = list[position]
 
-        holder.immagine.setImageResource(currentItem.image)
+        holder.immagine.setImageResource(currentItem.imageURL.toInt())
         holder.nomeFarmaco.text = currentItem.nomeFarmaco
-        holder.dose.text = currentItem.dosaggio
+        holder.dose.text = currentItem.dosaggio.toString()
     }
 
 }

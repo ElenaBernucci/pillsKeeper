@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.PillsKeeper.adapters.farmaciAdapter
+import com.example.PillsKeeper.model.Farmaco
 import com.example.PillsKeeper.model.FarmacoMinimal
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -19,7 +20,7 @@ class FarmaciVisualizza : Fragment() {
 
     private val db = Firebase.firestore
     val uid = Firebase.auth.currentUser?.uid
-    private var farmaci: ArrayList<FarmacoMinimal> = ArrayList()
+    private var farmaci: ArrayList<Farmaco> = ArrayList()
 
 
     override fun onCreateView(
@@ -37,12 +38,12 @@ class FarmaciVisualizza : Fragment() {
 
         //creaLista()
 
-        db.collection("Utenti").document(uid.toString()).collection("farmacoTest")
+        db.collection("Utenti").document(uid.toString()).collection("Farmaco")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     //Log.d("AccessoFarmaci", "${document.id} => ${document.data}")
-                    val farmaco : FarmacoMinimal = document.toObject()
+                    val farmaco : Farmaco = document.toObject()
                     Log.d("AccessoFarmaci", farmaco.toString())
                     farmaci.add(farmaco)
                 }
