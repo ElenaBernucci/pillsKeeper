@@ -7,13 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".dottore.dottoreInserireUnDottore">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:text="Inserisci foto"
+        android:textColor="#454773"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="130dp"
         android:layout_height="138dp"
         android:layout_marginTop="92dp"
         android:src="@mipmap/account"
-        app:layout_constraintBottom_toTopOf="@+id/textView36"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,15 +143,14 @@
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:text="Dati personali:"
         android:textColor="@color/azzurro"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView23"
