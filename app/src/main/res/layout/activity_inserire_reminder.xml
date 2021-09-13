@@ -14,6 +14,29 @@
         android:layout_height="wrap_content"
         tools:context=".reminder.ReminderInserireReminder">
 
+        <EditText
+            android:id="@+id/orarioreminder"
+            android:layout_width="95dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginLeft="92dp"
+            android:background="@drawable/text_view_border"
+            android:editable="true"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="08 : 45 PM"
+            android:inputType="textPersonName"
+            android:textColor="@color/blu"
+            android:textColorHighlight="@color/blu"
+            android:textColorHint="@color/blu"
+            android:textColorLink="@color/blu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avantimodifica"
+            app:layout_constraintVertical_bias="0.615" />
+
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
@@ -26,6 +49,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+        <TextView
+            android:id="@+id/btncambiaorario"
+            android:layout_width="122dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginRight="68dp"
+            android:text="Cambia orario"
+            android:textColor="@color/rosa"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/orarioreminder"
+            app:layout_constraintTop_toBottomOf="@+id/avantimodifica"
+            app:layout_constraintVertical_bias="0.592" />
 
         <TextView
             android:id="@+id/textView24"
@@ -46,7 +86,6 @@
             android:id="@+id/editTextTextPersonName2"
             android:layout_width="203dp"
             android:layout_height="31dp"
-            android:layout_marginTop="16dp"
             android:background="@drawable/text_view_border"
             android:ems="10"
             android:hint="Ripetizione"
@@ -60,7 +99,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.524"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/orario" />
+            tools:layout_editor_absoluteY="474dp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
@@ -229,23 +268,5 @@
             app:layout_constraintStart_toEndOf="@+id/radioButtonAltro"
             app:layout_constraintTop_toBottomOf="@+id/radioButtonPressione" />
 
-        <EditText
-            android:id="@+id/orario"
-            android:layout_width="192dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/text_view_border"
-            android:ems="10"
-            android:hint="Orario"
-            android:inputType="time"
-            android:textColor="@color/blu"
-            android:textColorHighlight="@color/blu"
-            android:textColorHint="@color/blu"
-            android:textColorLink="@color/blu"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avantimodifica" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+</ScrollView>
