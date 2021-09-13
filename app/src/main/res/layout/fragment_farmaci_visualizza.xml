@@ -18,5 +18,5 @@
             android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/farmaci_row"/>
+            tools:listitem="@layout/recycler_row"/>
     </LinearLayout>

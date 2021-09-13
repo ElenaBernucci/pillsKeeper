@@ -123,7 +123,11 @@
         android:id="@+id/dottoreInserireUnDottore"
         android:name="com.example.PillsKeeper.dottoreInserireUnDottore"
         android:label="fragment_dottore_inserire_un_dottore"
-        tools:layout="@layout/fragment_dottore_inserire_un_dottore" />
+        tools:layout="@layout/fragment_dottore_inserire_un_dottore" >
+        <action
+            android:id="@+id/action_to_dottore_visualizza"
+            app:destination="@id/dottore_visualizza" />
+    </fragment>
     <fragment
         android:id="@+id/farmaciaNessunaFarmacia"
         android:name="com.example.PillsKeeper.FarmaciaNessunaFarmacia"
@@ -168,4 +172,9 @@
             android:id="@+id/actionToImpostazioniModifica1"
             app:destination="@id/impostazioniModifica1" />
     </fragment>
+    <fragment
+        android:id="@+id/dottore_visualizza"
+        android:name="com.example.PillsKeeper.dottore_visualizza"
+        android:label="fragment_dottore_visualizza"
+        tools:layout="@layout/fragment_dottore_visualizza" />
 </navigation>
