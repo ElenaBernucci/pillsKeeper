@@ -21,5 +21,5 @@ data class Farmaco (var nomeFarmaco: String,
                var ripetizione: Int,
                var ogniQuanto: String,
                var imageURL: String){
-
+    constructor () : this("", "","", 0, 0, "", 0.0, false, "", 0, "", "")
 }

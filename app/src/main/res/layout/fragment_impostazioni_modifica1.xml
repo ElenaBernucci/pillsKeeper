@@ -83,7 +83,7 @@ android:id="@+id/frameLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfilo" />
 
     <EditText
         android:id="@+id/editTextNomeProfilo"
@@ -122,7 +122,7 @@ android:id="@+id/frameLayout4"
         app:layout_constraintTop_toBottomOf="@+id/editTextCodicefiscaleProfilo" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/editTextDataNascitaProfilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -172,7 +172,7 @@ android:id="@+id/frameLayout4"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextEmailProfilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -190,7 +190,7 @@ android:id="@+id/frameLayout4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataNascitaProfilo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

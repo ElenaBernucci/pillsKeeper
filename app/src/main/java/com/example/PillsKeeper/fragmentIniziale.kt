@@ -88,7 +88,7 @@ class FirstFragment : Fragment(), View.OnClickListener {
                 createSignInIntent()
             }
             R.id.imageButtonFarmaci2 -> {
-                db.collection("bellaRaga").document("gnegne").collection("fammacoTeste")
+                db.collection("Utenti").document(uid.toString()).collection("Farmaco")
                     .get()
                     .addOnSuccessListener { result ->
                         if (result.isEmpty){

@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <EditText
-        android:id="@+id/editTextNomeContatto5"
+        android:id="@+id/editTextNumeoTC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -54,10 +54,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfilo" />
 
     <EditText
-        android:id="@+id/editTextCognomeContatto"
+        android:id="@+id/editTextCognomeC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -76,10 +76,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeContatto" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomeC" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextEmailProfilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -98,10 +98,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextParentela" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextParentelaC" />
 
     <EditText
-        android:id="@+id/editTextNomeContatto"
+        android:id="@+id/editTextNomeC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -123,7 +123,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
     <EditText
-        android:id="@+id/editTextParentela"
+        android:id="@+id/editTextParentelaC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -142,7 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCognomeContatto" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCognomeC" />
 
     <TextView
         android:id="@+id/textView49"
@@ -156,7 +156,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView44"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeContatto5"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumeoTC"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
