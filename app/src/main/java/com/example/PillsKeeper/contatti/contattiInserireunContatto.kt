@@ -5,12 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.example.PillsKeeper.FarmaciInserireUnFarmaco1Directions
 import com.example.PillsKeeper.R
-import kotlinx.android.synthetic.main.activity_invia_mail.*
 import kotlinx.android.synthetic.main.fragment_contatti_inserireun_contatto.*
 
 class contattiInserireunContatto : Fragment(), View.OnClickListener {
@@ -40,7 +37,7 @@ class contattiInserireunContatto : Fragment(), View.OnClickListener {
         val nomeC = editTextNomeC.text.toString()
         val cognomeC = editTextCognomeC.text.toString()
         val parentelaC = editTextParentelaC.text.toString()
-        val mailC = editTextEmailC.text.toString()
+        val mailC = editTextEmailProfilo.text.toString()
         val NumeroC = editTextNumeoTC.text.toString()
 
         //variabili di controllo campi non vuoti
@@ -78,11 +75,11 @@ class contattiInserireunContatto : Fragment(), View.OnClickListener {
         }
         if(mailC == "") {
             mailCOK = false
-            editTextEmailC.setBackgroundResource(R.drawable.text_view_border_red)
+            editTextEmailProfilo.setBackgroundResource(R.drawable.text_view_border_red)
         }
         else {
             mailCOK = true
-            editTextEmailC.setBackgroundResource(R.drawable.text_view_border)
+            editTextEmailProfilo.setBackgroundResource(R.drawable.text_view_border)
         }
         if(NumeroC == "") {
             numeroOK = false

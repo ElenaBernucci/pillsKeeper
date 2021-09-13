@@ -8,7 +8,20 @@
     tools:context=".dottore.dottoreInserireUnDottore">
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Inserisci una foto:"
+        android:textColor="@color/azzurro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textViewInserisciFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -26,12 +39,12 @@
         android:id="@+id/imageView4"
         android:layout_width="130dp"
         android:layout_height="138dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="24dp"
         android:src="@mipmap/account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <EditText
         android:id="@+id/editTextTelefono"
@@ -150,7 +163,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewInserisciFoto" />
 
     <TextView
         android:id="@+id/textView23"

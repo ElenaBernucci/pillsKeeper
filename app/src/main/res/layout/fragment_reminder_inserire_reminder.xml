@@ -18,7 +18,7 @@
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salva e aggiungi il farmaco"
+            android:text="Salva e aggiungi il reminder"
             android:textColor="@color/rosa"
             android:textSize="18sp"
             android:textStyle="bold"
