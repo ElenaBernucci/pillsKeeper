@@ -7,10 +7,17 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/drawable/icona_mappa_farmacia_background.xml" value="0.3828125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmacia_nessuna_farmacia.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/mipmap-anydpi-v26/icona_mappa_farmacia.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_contatti.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_invia_mail.xml" value="0.2" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_menu_iniziale.xml" value="0.2536231884057971" />
         <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_smsprovvisoria.xml" value="0.2536231884057971" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_inserire_un_dottore.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_contatti_contatto_selezionato.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_contatti_inserireun_contatto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_contatti_nessun_contatto.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_dottore_selezionato.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_inserire_un_dottore.xml" value="0.264" />
+        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco2.xml" value="0.2536231884057971" />
         <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_visualizza.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_impostazioni_modifica2.xml" value="0.2536231884057971" />
