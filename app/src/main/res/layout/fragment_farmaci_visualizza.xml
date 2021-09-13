@@ -5,6 +5,12 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:text="Aggiungi un farmaco" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecycleViewFarmaci"
             android:padding="4dp"
