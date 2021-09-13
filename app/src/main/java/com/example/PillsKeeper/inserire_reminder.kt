@@ -36,6 +36,7 @@ class inserire_reminder : AppCompatActivity() {
             showTimePicker()
 
         }
+
         binding.textView22.setOnClickListener{
             setAlarm()
 
