@@ -66,7 +66,7 @@
             app:argType="string" />
         <argument
             android:name="Dosaggio"
-            app:argType="integer" />
+            app:argType="float" />
         <argument
             android:name="NumDosi"
             app:argType="integer" />
@@ -142,7 +142,14 @@
         android:id="@+id/farmaciVisualizza"
         android:name="com.example.PillsKeeper.FarmaciVisualizza"
         android:label="fragment_farmaci_visualizza"
-        tools:layout="@layout/fragment_farmaci_visualizza" />
+        tools:layout="@layout/fragment_farmaci_visualizza" >
+        <action
+            android:id="@+id/fromVisualizzaToInserireFarmaco1"
+            app:destination="@id/faraciInserireUnFarmaco1" />
+        <action
+            android:id="@+id/actionTovisualizzaFarmaco"
+            app:destination="@id/visualizzaFarmaco" />
+    </fragment>
     <fragment
         android:id="@+id/impostazioniModifica1"
         android:name="com.example.PillsKeeper.utente.ImpostazioniModifica1"
@@ -177,4 +184,15 @@
         android:name="com.example.PillsKeeper.dottore_visualizza"
         android:label="fragment_dottore_visualizza"
         tools:layout="@layout/fragment_dottore_visualizza" />
+    <fragment
+        android:id="@+id/visualizzaFarmaco"
+        android:name="com.example.PillsKeeper.visualizzaFarmaco"
+        android:label="visualizzaFarmaco" >
+        <argument
+            android:name="farmaco"
+            app:argType="com.example.PillsKeeper.model.Farmaco" />
+        <action
+            android:id="@+id/fromVisualizzaFarmacoTofarmaciVisualizza"
+            app:destination="@id/farmaciVisualizza" />
+    </fragment>
 </navigation>

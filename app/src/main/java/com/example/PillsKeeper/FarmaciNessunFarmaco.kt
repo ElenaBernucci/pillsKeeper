@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.PillsKeeper.R
+import kotlinx.android.synthetic.main.fragment_farmaci_nessun_farmaco.*
 
 class FarmaciNessunFarmaco : Fragment(), View.OnClickListener {
 
@@ -26,7 +27,7 @@ class FarmaciNessunFarmaco : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        view.findViewById<ImageButton>(R.id.imageButtonReminder3).setOnClickListener(this)
+        imageButtonReminder3.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {

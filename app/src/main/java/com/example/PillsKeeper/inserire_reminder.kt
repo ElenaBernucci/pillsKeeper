@@ -11,15 +11,15 @@ import android.content.Intent
 import android.service.autofill.CharSequenceTransformation
 import android.view.LayoutInflater
 import android.widget.Toast
-import com.example.PillsKeeper.databinding.ActivityInserireReminderBinding
-import com.example.PillsKeeper.databinding.ActivityMainBinding
+//import com.example.PillsKeeper.databinding.ActivityInserireReminderBinding
+//import com.example.PillsKeeper.databinding.ActivityMainBinding
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import java.util.*
 
 class inserire_reminder : AppCompatActivity() {
 
-    private lateinit var binding : ActivityInserireReminderBinding
+    //private lateinit var binding : ActivityInserireReminderBinding
     private lateinit var picker : MaterialTimePicker
     private lateinit var calendar : Calendar
     private lateinit var alarmManager :AlarmManager
@@ -28,7 +28,7 @@ class inserire_reminder : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = ActivityInserireReminderBinding.inflate(layoutInflater)
+        /*binding = ActivityInserireReminderBinding.inflate(layoutInflater)
         setContentView(binding.root)
         createNotificationChannel()
 
@@ -119,7 +119,7 @@ class inserire_reminder : AppCompatActivity() {
             )
 
             notificationManager.createNotificationChannel(channel)
-        }
+        }*/
 
     }
 }

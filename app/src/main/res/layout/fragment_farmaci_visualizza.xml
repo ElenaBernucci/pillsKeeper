@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/bottoneAggiungi"
         android:layout_width="fill_parent"
         android:layout_height="64dp"
         android:backgroundTint="@color/rosa"
@@ -18,5 +19,6 @@
             android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_above="@+id/bottoneAggiungi"
             tools:listitem="@layout/recycler_row"/>
     </LinearLayout>

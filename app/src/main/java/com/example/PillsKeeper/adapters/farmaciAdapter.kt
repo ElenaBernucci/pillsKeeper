@@ -10,12 +10,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.*
 import com.example.PillsKeeper.R
 import com.example.PillsKeeper.model.Farmaco
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
-import kotlinx.android.synthetic.main.farmaci_row.view.*
+import kotlinx.android.synthetic.main.recycler_row.view.*
 
 
 class farmaciAdapter (var context: Context,

@@ -66,10 +66,13 @@ class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
         val nomeFarmacoOK : Boolean
         val nomeCommercialeOK : Boolean
         val casaProduttriceOK :Boolean
-        val dosaggioOK : Boolean
-        val numDosiOK : Boolean
+        var dosaggioOK : Boolean
+        var numDosiOK : Boolean
         var textDateOK : Boolean
         val photoUriOK : Boolean
+
+        var dosaggio = 0.0F
+        var numDosi = 0
 
         //check sui campi vuoti
         if(nomeFarmaco == "") {
@@ -99,23 +102,26 @@ class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
             editTextCasaProduttrice.setBackgroundResource(R.drawable.text_view_border)
         }
 
-        if(dosaggioText == "") {
-            dosaggioOK = false
-            editTextDosaggio.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
+        try{
+            dosaggio = dosaggioText.toFloat()
             dosaggioOK = true
             editTextDosaggio.setBackgroundResource(R.drawable.text_view_border)
         }
-
-        if(numDosiText == "") {
-            numDosiOK = false
-            editTextNumDosi.setBackgroundResource(R.drawable.text_view_border_red)
+        catch (e:Exception){
+            dosaggioOK = false
+            editTextDosaggio.setBackgroundResource(R.drawable.text_view_border_red)
         }
-        else {
+
+        try {
+            numDosi = numDosiText.toInt()
             numDosiOK = true
             editTextNumDosi.setBackgroundResource(R.drawable.text_view_border)
         }
+        catch (e: Exception){
+            numDosiOK = false
+            editTextNumDosi.setBackgroundResource(R.drawable.text_view_border_red)
+        }
+
 
         if(textDate == "") {
             textDateOK = false
@@ -143,8 +149,7 @@ class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
             photoUriOK = true
 
         if(nomeFarmacoOK && nomeCommercialeOK && casaProduttriceOK && dosaggioOK && numDosiOK && textDateOK && photoUriOK) {
-            val dosaggio = dosaggioText.toInt()
-            val numDosi = numDosiText.toInt()
+
             val action = FarmaciInserireUnFarmaco1Directions.actionInserireUnFarmaco2(
                 nomeFarmaco,
                 nomeCommerciale,

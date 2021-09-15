@@ -5,17 +5,17 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.PillsKeeper.databinding.ActivityInviaMailBinding
+//import com.example.PillsKeeper.databinding.ActivityInviaMailBinding
 import kotlinx.android.synthetic.main.activity_invia_mail.*
 import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco1.*
 
 class inviaMail : AppCompatActivity() {
 
-    lateinit var binding: ActivityInviaMailBinding
+    //lateinit var binding: ActivityInviaMailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityInviaMailBinding.inflate(layoutInflater)
+        /*binding = ActivityInviaMailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.txtInviaMail.setOnClickListener{
@@ -93,7 +93,7 @@ class inviaMail : AppCompatActivity() {
             }
 
 
-        }
+        }*/
 
     }
 }

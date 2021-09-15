@@ -20,7 +20,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco1.*
-import kotlinx.android.synthetic.main.fragment_impostazioni_modifica2.*
+import kotlinx.android.synthetic.main.fragment_impostazioni_modifica.*
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*

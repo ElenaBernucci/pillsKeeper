@@ -3,25 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/drawable/icona_farmacia_mappa.xml" value="0.3828125" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/drawable/icona_mappa_farmacia_background.xml" value="0.3828125" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmacia_nessuna_farmacia.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/pillsKeeper/app/src/main/res/mipmap-anydpi-v26/icona_mappa_farmacia.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_invia_mail.xml" value="0.2" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_menu_iniziale.xml" value="0.2536231884057971" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/activity_smsprovvisoria.xml" value="0.2536231884057971" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_inserire_un_dottore.xml" value="0.20923913043478262" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco2.xml" value="0.2536231884057971" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_visualizza.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_impostazioni_modifica2.xml" value="0.2536231884057971" />
-        <entry key="..\:/Users/artur/StudioProjects/pillsKeeper/app/src/main/res/layout/fragment_visualizza_farmaco.xml" value="0.4" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/farmaci_row.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_dottore_selezionato.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_inserire_un_dottore.xml" value="0.16" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_nessun_dottore.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_dottore_visualizza.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_con_dei_farmaci.xml" value="0.22" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco1.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco2.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_nessun_farmaco.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_visualizza.xml" value="0.1" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmacia_nessuna_farmacia.xml" value="0.1" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_impostazioni_modifica1.xml" value="0.11730072463768115" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_reminder_inserire_reminder.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_visualizza_farmaco.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.example.PillsKeeper.reminder
+package com.example.PillsKeeper
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

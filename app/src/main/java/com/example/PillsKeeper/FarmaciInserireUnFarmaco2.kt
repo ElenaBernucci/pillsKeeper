@@ -43,7 +43,7 @@ class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
     private lateinit var nomeFarmaco: String
     private lateinit var nomeCommerciale : String
     private lateinit var casaProduttrice : String
-    private var dosaggio : Int = 0
+    private var dosaggio : Double = 0.0
     private var numDosi : Int = 0
     private lateinit var date : LocalDate
     private lateinit var localImageUri : Uri
@@ -72,7 +72,7 @@ class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
         nomeFarmaco = args.nomeFarmaco
         nomeCommerciale = args.nomeCommerciale
         casaProduttrice = args.casaProduttrice
-        dosaggio = args.dosaggio
+        dosaggio = args.dosaggio.toDouble()
         numDosi = args.numDosi
         date = LocalDate.parse(args.textDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ITALY))
         localImageUri = Uri.parse(args.image)
@@ -230,7 +230,7 @@ class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
                     //Salvataggio immagine su Cloud Storage
                     val orarioString = orario.toString()
                     val textDate = date.toString()
-                    val storageAccess = cloudStorage.child("Farmaci/$uid/")
+                    val storageAccess = cloudStorage.child("Farmaci/"+ uid + "/" + localImageUri.lastPathSegment)
                     storageAccess.putFile(localImageUri).addOnSuccessListener {
                         storageAccess.downloadUrl.addOnSuccessListener {
                             remoteImageUri = it.toString()
