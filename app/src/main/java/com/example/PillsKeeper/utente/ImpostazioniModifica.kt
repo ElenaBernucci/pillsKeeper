@@ -14,7 +14,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.bumptech.glide.Glide
-import com.example.PillsKeeper.FarmaciInserireUnFarmaco1Directions
 import com.example.PillsKeeper.R
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -27,7 +26,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 
-class ImpostazioniModifica2 : Fragment(), View.OnClickListener {
+class ImpostazioniModifica : Fragment(), View.OnClickListener {
 
     private val db = Firebase.firestore
     private val uid = Firebase.auth.currentUser?.uid
@@ -42,7 +41,7 @@ class ImpostazioniModifica2 : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_impostazioni_modifica2, container, false)
+        val view = inflater.inflate(R.layout.fragment_impostazioni_modifica, container, false)
         image = view.findViewById(R.id.imageView9)
         imagePickText = view.findViewById(R.id.textView8)
         imagePickText.setOnClickListener {

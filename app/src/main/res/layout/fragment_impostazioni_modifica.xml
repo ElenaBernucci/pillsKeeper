@@ -11,7 +11,7 @@
         android:id="@+id/frameLayout14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".utente.ImpostazioniModifica2">
+        tools:context=".utente.ImpostazioniModifica">
 
         <TextView
             android:id="@+id/textView65"
