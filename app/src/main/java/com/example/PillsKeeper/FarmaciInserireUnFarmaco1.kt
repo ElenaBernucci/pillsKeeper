@@ -25,7 +25,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 private const val TAG = "CreateActivity"
-private const val PICK_IMAGE_CODE = 1234
+const val PICK_IMAGE_CODE = 1234
 
 class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
 

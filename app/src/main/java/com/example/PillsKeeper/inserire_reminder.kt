@@ -34,12 +34,10 @@ class inserire_reminder : AppCompatActivity() {
 
         binding.btncambiaorario.setOnClickListener {
             showTimePicker()
-
         }
 
         binding.textView22.setOnClickListener{
             setAlarm()
-
         }
 
     }
@@ -107,7 +105,6 @@ class inserire_reminder : AppCompatActivity() {
 
     }
 
-
     //canale per le notifiche
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
@@ -122,7 +119,6 @@ class inserire_reminder : AppCompatActivity() {
             )
 
             notificationManager.createNotificationChannel(channel)
-
         }
 
     }
