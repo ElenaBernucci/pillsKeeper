@@ -14,31 +14,9 @@
         android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonContatti"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/loghino" />
-
-    <ImageButton
-        android:id="@+id/imageButtonContatti"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/todo"
-        android:padding="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:scaleType="fitStart"
-        android:tint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/logo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
-        app:srcCompat="@mipmap/contact" />
 
     <fragment
         android:id="@+id/fragment"

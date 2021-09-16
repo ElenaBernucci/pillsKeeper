@@ -78,29 +78,8 @@ class FarmaciVisualizza : Fragment(), farmaciAdapter.OnItemClickListener, View.O
         navc.navigate(R.id.fromVisualizzaToInserireFarmaco1)
     }
 
-    /*private fun creaLista() {
-        val elencoFarmaci = arrayOf("Acarbosio", "Acebutololo", "Paracetamolo", "Acetazolamide", "Acido acetoidrossamico",
-            "Acetilcisteina", "Acetilprocainamide", "Acitretina", "Aclidinio", "Aciclovir", "Adalimumab", "Adapalene", "Adefovir", "Adenosina",
-            "Aflibercept", "Agalsidasi beta", "Albendazolo", "Albiglutide", "Albuterolo", "Alcaftadina", "Aldesleuchina", "Alectinib", "Alemtuzumab",
-            "Alendronato", "Alfuzosina", "Alirocumab", "Aliskiren", "Allopurinolo", "Almotriptan",
-            "Alogliptin", "Alosetron", "Alprazolam", "Alprostadil")
-        //val list = ArrayList<FarmacoMinimal>()
-        var i = 0
-        for(farmaco in elencoFarmaci) {
-            val drawable = when (i % 3) {
-                0 -> R.drawable.logo
-                1 -> R.drawable.amu_bubble_mask
-                else -> R.drawable.common_google_signin_btn_icon_dark
-            }
-            val item = FarmacoMinimal(drawable, farmaco, (i%3+1).toString())
-            db.collection("Utenti").document(uid.toString()).collection("farmacoTest").document(farmaco).set(item)
-                .addOnSuccessListener { Log.d("Firestore", "DocumentSnapshot successfully written!") }
-                .addOnFailureListener { e -> Log.w("Firestore", "Error writing document", e) }
-            //Log.d("getInstance", uid.toString())
+  //  override fun onBackPressed(v: View?) {
+    //    navc.navigate(R.id.fromVisualizzaFarmacoatoFirstFragment)
+    //}
 
-            //list += item
-            i++
-        }
-        Log.d("Creazione Lista", "Ho fatto tutto")
-    }*/
 }
