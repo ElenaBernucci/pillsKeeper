@@ -57,5 +57,4 @@ class visualizzaFarmaco : Fragment(), View.OnClickListener {
             }
         }
     }
-
 }

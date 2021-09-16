@@ -149,6 +149,9 @@
         <action
             android:id="@+id/actionTovisualizzaFarmaco"
             app:destination="@id/visualizzaFarmaco" />
+        <action
+            android:id="@+id/fromVisualizzaFarmacoatoFirstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/impostazioniModifica1"
