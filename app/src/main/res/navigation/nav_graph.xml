@@ -28,6 +28,12 @@
         <action
             android:id="@+id/fromFirstFragmentToFarmaciVisualizza"
             app:destination="@id/farmaciVisualizza" />
+        <action
+            android:id="@+id/action_to_inizialeAccessoFragment"
+            app:destination="@id/inizialeAccessoFragment" />
+        <action
+            android:id="@+id/from_firstFragment_to_impostazioniModifica"
+            app:destination="@id/impostazioniModifica" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
@@ -198,4 +204,20 @@
             android:id="@+id/fromVisualizzaFarmacoTofarmaciVisualizza"
             app:destination="@id/farmaciVisualizza" />
     </fragment>
+    <fragment
+        android:id="@+id/inizialeAccessoFragment"
+        android:name="com.example.PillsKeeper.InizialeAccessoFragment"
+        android:label="fragment_iniziale_accesso"
+        tools:layout="@layout/fragment_iniziale_accesso" >
+        <action
+            android:id="@+id/action_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/from_inizialeAccesso_to_impostazioniModifica"
+            app:destination="@id/impostazioniModifica" />
+    </fragment>
+    <fragment
+        android:id="@+id/impostazioniModifica"
+        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica"
+        android:label="ImpostazioniModifica" />
 </navigation>

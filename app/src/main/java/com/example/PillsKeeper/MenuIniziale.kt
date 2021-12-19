@@ -13,16 +13,11 @@ import kotlinx.android.synthetic.main.activity_menu_iniziale.*
 import kotlinx.android.synthetic.main.fragment_iniziale.*
 import java.io.File
 
-open class MenuIniziale : AppCompatActivity(), View.OnClickListener {
-
-    lateinit var navc: NavController
+open class MenuIniziale : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_iniziale)
     }
 
-    override fun onClick(v: View?) {
-        navc?.navigate(R.id.actionToFragmentNessunContatto)
-    }
 }

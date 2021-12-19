@@ -34,4 +34,8 @@
     <string name="nome_farmaco">Nome Farmaco</string>
     <string name="dosaggio">Dosaggio</string>
     <string name="immagine_del_farmaco">Immagine del Farmaco</string>
+    <string name="ben_tornato">Ben tornato!</string>
+    <string name="esci">Esci</string>
+    <string name="impostazioni">Impostazioni</string>
+    <string name="foto">foto</string>
 </resources>
