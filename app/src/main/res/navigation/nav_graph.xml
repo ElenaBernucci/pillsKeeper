@@ -219,5 +219,9 @@
     <fragment
         android:id="@+id/impostazioniModifica"
         android:name="com.example.PillsKeeper.utente.ImpostazioniModifica"
-        android:label="ImpostazioniModifica" />
+        android:label="ImpostazioniModifica" >
+        <action
+            android:id="@+id/from_impostazioniModifica_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
 </navigation>

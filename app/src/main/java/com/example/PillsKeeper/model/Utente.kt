@@ -4,14 +4,14 @@ import java.util.*
 
 data class Utente (var nome: String,
               var cognome: String,
-              var dataDiNascita: Date,
+              var dataDiNascita: String,
               var email: String,
               var codiceFiscale: String,
 
               var altezza: Int,
-              var circonferenzaVita: String?,
-              var massaMagra: String?,
-              var massaGrassa: String?,
+              var circonferenzaVita: Int,
+              var massaMagra: Double,
+              var massaGrassa: Double,
 
               var allergie: String?,
 
@@ -20,5 +20,4 @@ data class Utente (var nome: String,
               var gruppoSanguigno: String,
 
               var imageURL: String,
-              ) {
-}
+              )

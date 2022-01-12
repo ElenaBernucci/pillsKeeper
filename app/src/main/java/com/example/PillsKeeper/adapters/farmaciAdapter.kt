@@ -26,7 +26,6 @@ class farmaciAdapter (var context: Context,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        Log.d("AccessoAdapter", "Inizio a creare il tutto")
         var view = LayoutInflater.from(context).inflate(R.layout.recycler_row, parent, false)
         return ViewHolder(view)
     }

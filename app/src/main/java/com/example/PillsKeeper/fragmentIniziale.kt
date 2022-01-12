@@ -62,37 +62,19 @@ class FirstFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val accessoEffettuato: Boolean
-        accessoEffettuato = false
-
         navc= Navigation.findNavController(view)
         imageButtonReminder.setOnClickListener(this)
         imageButtonFarmaci2.setOnClickListener(this)
         imageButtonReminder2.setOnClickListener(this)
         imageButtonFarmacia2.setOnClickListener(this)
         imageButtonMedico2.setOnClickListener(this)
+        textView68.setOnClickListener(this)
+        textView19.setOnClickListener(this)
 
-        if (accessoEffettuato){
-            testoInAlto.text = "Hai effettuato l'accesso come: " + "Nome Utente"
-
-
-
+        if(uid == null){
+            navc.navigate(R.id.action_to_inizialeAccessoFragment)
         }
-        else{
-            testoInAlto.text = "Accedi per sbloccare tutte le funzionalità"
-            imageButtonContatti.isEnabled = false
-            imageButtonMedico2.isEnabled = false
-            imageButtonFarmaci2.isEnabled = false
-            imageButtonFarmacia2.isEnabled = false
-            imageButtonReminder2.isEnabled = false
-
-        }
-
-        val city = hashMapOf(
-            "name" to "Los Angeles",
-            "state" to "CA",
-            "country" to "USA"
-        )
+        Log.d("onViewCreated",uid.toString())
 
         /*db.collection("Utenti").document(uid.toString()).collection("farmacoTest").document("farm").set(city)
             .addOnSuccessListener { Log.d("Firestore", "DocumentSnapshot successfully written!") }

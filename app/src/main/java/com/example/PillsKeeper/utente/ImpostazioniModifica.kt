@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +14,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.example.PillsKeeper.R
+import com.example.PillsKeeper.model.Utente
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -31,9 +35,13 @@ class ImpostazioniModifica : Fragment(), View.OnClickListener {
     private val db = Firebase.firestore
     private val uid = Firebase.auth.currentUser?.uid
     private val cloudStorage = FirebaseStorage.getInstance().getReference()
-    private lateinit var photoUri: Uri
-    private lateinit var imagePickText : TextView
-    private lateinit var image : ImageView
+    private var primaRegistrazione = false
+    private lateinit var localImageUri: Uri
+    private lateinit var remoteImageUri: String
+    private lateinit var imagePickText: TextView
+    private lateinit var image: ImageView
+    lateinit var navc: NavController
+    lateinit var dati: Utente
 
 
     override fun onCreateView(
@@ -50,161 +58,274 @@ class ImpostazioniModifica : Fragment(), View.OnClickListener {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navc = Navigation.findNavController(view)
+        textView25.setOnClickListener(this)
+        textView62.setOnClickListener(this)
+        db.collection("Utenti").document(uid.toString()).collection("Dati personali")
+            .get()
+            .addOnSuccessListener { result ->
+                primaRegistrazione = result.isEmpty
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Error Loading Database", Toast.LENGTH_LONG).show()
+            }
+    }
+
     @RequiresApi(Build.VERSION_CODES.O)
-    override fun onClick(p0: View?) {
+    override fun onClick(v: View?) {
 
         val nomeProfilo = editTextNomeProfilo2.text.toString()
         val cognomeProfilo = editTextCognomeProfilo2.text.toString()
         val dataNascitaProfilo = editTextDataNascitaProfilo2.text.toString()
         val emailProfilo = editTextEmailProfilo2.text.toString()
         val codiceFiscaleProfilo = editTextCodicefiscaleProfilo2.text.toString()
-        val altezzaProfilo = editTextAltezza.text.toString()
-        val pesoProfilo = editTextPeso.text.toString()
-        val circonferenzaVitaProfilo = editTextCirconferenzavita.text.toString()
-        val massaMagraProfilo = editTextMassamagra.text.toString()
-        val massaGrassaProfilo = editTextMassagrassa.text.toString()
+        val altezzaProfiloText = editTextAltezza.text.toString()
+        var altezzaProfilo = 0
+        val pesoProfiloText = editTextPeso.text.toString()
+        var pesoProfilo = 0.0
+        val circonferenzaVitaProfiloText = editTextCirconferenzavita.text.toString()
+        var circonferenzaVitaProfilo = 0
+        val massaMagraProfiloText = editTextMassamagra.text.toString()
+        var massaMagraProfilo = 0.0
+        val massaGrassaProfiloText = editTextMassagrassa.text.toString()
+        var massaGrassaProfilo = 0.0
         val allergieProfilo = editTextAllergiegenerali.text.toString()
         val patologieProfilo = editTextPatologie3.text.toString()
+        val spinnerGruppoSanguigno = spinnergrupposanguigno.selectedItem.toString()
         //controllo campi non vuoti
-        val nomeProfiloOK : Boolean
-        val cognomeProfiloOK : Boolean
-        var dataNascitaProfiloOK : Boolean
-        val codiceFiscaleProfiloOK : Boolean
-        val altezzaProfiloOK : Boolean
-        val pesoProfiloOK : Boolean
-        val emailProfiloOK : Boolean
-        val circonferenzaVitaProfiloOK : Boolean
-        val massaMagraProfiloOK : Boolean
-        val massaGrassaProfiloOK : Boolean
-        val allergieProfiloOK : Boolean
-        val patologieProfiloOK : Boolean
-        val photoUriOK : Boolean
-        val isOK : Boolean
+        var nomeProfiloOK: Boolean
+        var cognomeProfiloOK: Boolean
+        var dataNascitaProfiloOK: Boolean
+        var codiceFiscaleProfiloOK: Boolean
+        var altezzaProfiloOK: Boolean
+        var pesoProfiloOK: Boolean
+        var emailProfiloOK: Boolean
+        var circonferenzaVitaProfiloOK: Boolean
+        var massaMagraProfiloOK: Boolean
+        var massaGrassaProfiloOK: Boolean
+        var allergieProfiloOK: Boolean
+        var patologieProfiloOK: Boolean
+        var spinnerGruppoSanguignoOk: Boolean
+        var photoUriOK: Boolean
+        val isOK: Boolean
 
-        //check sui campi vuoti
-        if(nomeProfilo == "") {
-            nomeProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            nomeProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(cognomeProfilo == "") {
-            cognomeProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            cognomeProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(dataNascitaProfilo == "") {
-            dataNascitaProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            try {
-                LocalDate.parse(dataNascitaProfilo, DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ITALY))
-                dataNascitaProfiloOK = true
-                editTextDate.setBackgroundResource(R.drawable.text_view_border)
+
+
+        when (v?.id) {
+            R.id.textView62 -> {
+                navc.navigate(R.id.from_impostazioniModifica_to_firstFragment)
             }
-            catch (e : Exception){
-                dataNascitaProfiloOK = false
-                editTextDate.setBackgroundResource(R.drawable.text_view_border_red)
+
+            R.id.textView25 -> {
+                Log.d("Salva", "Hai premuto salva")
+                Log.d("primaRegistrazione", primaRegistrazione.toString())
+                if (primaRegistrazione) {
+                    //check sui campi vuoti
+                    if (nomeProfilo == "") {
+                        nomeProfiloOK = false
+                        editTextNomeProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        nomeProfiloOK = true
+                        editTextNomeProfilo2.setBackgroundResource(R.drawable.text_view_border)
+                    }
+                    if (cognomeProfilo == "") {
+                        cognomeProfiloOK = false
+                        editTextCognomeProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        cognomeProfiloOK = true
+                        editTextCognomeProfilo2.setBackgroundResource(R.drawable.text_view_border)
+                    }
+                    if (dataNascitaProfilo == "") {
+                        dataNascitaProfiloOK = false
+                        editTextDataNascitaProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        try {
+                            LocalDate.parse(
+                                dataNascitaProfilo,
+                                DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ITALY)
+                            )
+                            dataNascitaProfiloOK = true
+                            editTextDataNascitaProfilo2.setBackgroundResource(R.drawable.text_view_border)
+                        } catch (e: Exception) {
+                            dataNascitaProfiloOK = false
+                            editTextDataNascitaProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                        }
+                    }
+                    if (emailProfilo == "") {
+                        emailProfiloOK = false
+                        editTextEmailProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        emailProfiloOK = true
+                        editTextEmailProfilo2.setBackgroundResource(R.drawable.text_view_border)
+                    }
+                    if (codiceFiscaleProfilo == "") {
+                        codiceFiscaleProfiloOK = false
+                        editTextCodicefiscaleProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        codiceFiscaleProfiloOK = true
+                        editTextCodicefiscaleProfilo2.setBackgroundResource(R.drawable.text_view_border)
+                    }
+                    if (altezzaProfiloText == "") {
+                        altezzaProfiloOK = false
+                        editTextAltezza.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        try {
+                            altezzaProfilo = altezzaProfiloText.toInt()
+                            altezzaProfiloOK = true
+                            editTextAltezza.setBackgroundResource(R.drawable.text_view_border)
+                        } catch (e: Exception) {
+                            altezzaProfiloOK = false
+                            editTextAltezza.setBackgroundResource(R.drawable.text_view_border_red)
+                        }
+                    }
+                    if (pesoProfiloText == "") {
+                        pesoProfiloOK = false
+                        editTextPeso.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        try {
+                            pesoProfilo = pesoProfiloText.toDouble()
+                            pesoProfiloOK = true
+                            editTextPeso.setBackgroundResource(R.drawable.text_view_border)
+                        } catch (e: Exception) {
+                            pesoProfiloOK = false
+                            editTextPeso.setBackgroundResource(R.drawable.text_view_border_red)
+                        }
+
+                    }
+                    if (circonferenzaVitaProfiloText == "") {
+                        circonferenzaVitaProfiloOK = false
+                        editTextCirconferenzavita.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        try {
+                            circonferenzaVitaProfilo = circonferenzaVitaProfiloText.toInt()
+                            circonferenzaVitaProfiloOK = true
+                            editTextCirconferenzavita.setBackgroundResource(R.drawable.text_view_border)
+                        } catch (e: Exception) {
+                            circonferenzaVitaProfiloOK = false
+                            editTextCirconferenzavita.setBackgroundResource(R.drawable.text_view_border_red)
+                        }
+                    }
+                    if (massaMagraProfiloText == "") {
+                        massaMagraProfiloOK = false
+                        editTextMassamagra.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        try {
+                            massaMagraProfilo = massaMagraProfiloText.toDouble()
+                            massaMagraProfiloOK = true
+                            editTextMassamagra.setBackgroundResource(R.drawable.text_view_border)
+                        } catch (e: Exception) {
+                            massaMagraProfiloOK = false
+                            editTextMassamagra.setBackgroundResource(R.drawable.text_view_border_red)
+                        }
+                    }
+                    if (massaGrassaProfiloText == "") {
+                        massaGrassaProfiloOK = false
+                        editTextMassagrassa.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        try {
+                            massaGrassaProfilo = massaGrassaProfiloText.toDouble()
+                            massaGrassaProfiloOK = true
+                            editTextMassagrassa.setBackgroundResource(R.drawable.text_view_border)
+                        } catch (e: Exception) {
+                            massaGrassaProfiloOK = false
+                            editTextMassagrassa.setBackgroundResource(R.drawable.text_view_border_red)
+                        }
+                    }
+
+                    if (spinnergrupposanguigno.selectedItem == "- Seleziona -") {
+                        spinnerGruppoSanguignoOk = false
+                        spinnergrupposanguigno.setBackgroundResource(R.drawable.text_view_border_red)
+                    } else {
+                        spinnerGruppoSanguignoOk = true
+                        spinnergrupposanguigno.setBackgroundResource(R.drawable.text_view_border)
+                    }
+
+                    if (!this::localImageUri.isInitialized) {
+                        photoUriOK = false
+                        Toast.makeText(requireActivity(), "Inserire una foto", Toast.LENGTH_SHORT)
+                            .show()
+                    } else
+                        photoUriOK = true
+
+                    if (nomeProfiloOK && cognomeProfiloOK && dataNascitaProfiloOK && emailProfiloOK && codiceFiscaleProfiloOK && altezzaProfiloOK && photoUriOK && pesoProfiloOK && circonferenzaVitaProfiloOK && massaMagraProfiloOK && massaGrassaProfiloOK && spinnerGruppoSanguignoOk) {
+                        /* val action = FarmaciInserireUnFarmaco1Directions.actionInserireUnFarmaco2(
+                             photoUri.toString()
+                         )*/
+                        Log.d("Controlli", "Tutto OK")
+                        val storageAccess =
+                            cloudStorage.child("Dati personali/" + uid + "/" + localImageUri.lastPathSegment)
+                        storageAccess.putFile(localImageUri).addOnSuccessListener {
+                            storageAccess.downloadUrl.addOnSuccessListener {
+                                remoteImageUri = it.toString()
+
+                                val utente = Utente(nomeProfilo, cognomeProfilo, dataNascitaProfilo, emailProfilo, codiceFiscaleProfilo, altezzaProfilo, circonferenzaVitaProfilo, massaMagraProfilo, massaGrassaProfilo, allergieProfilo, patologieProfilo, spinnerGruppoSanguigno, remoteImageUri)
+                                db.collection("Utenti").document(uid.toString()).collection("Dati personali").document(
+                                    "$nomeProfilo $cognomeProfilo"
+                                ).set(utente)
+                                    .addOnSuccessListener { Toast.makeText(requireActivity(), "Farmaco salvato con successo!!", Toast.LENGTH_LONG).show()
+                                        navc.navigate (R.id.from_impostazioniModifica_to_firstFragment) }
+                                    .addOnFailureListener { Toast.makeText(requireActivity(), "Errore salvataggio nel database", Toast.LENGTH_LONG).show() }
+                                }
+                            }.addOnFailureListener {
+                                Toast.makeText(requireContext(), "Error getting access to the Database, try again", Toast.LENGTH_LONG).show()
+                            }
+                            navc.navigate(R.id.from_impostazioniModifica_to_firstFragment)
+                    }
+                    else{
+                        Toast.makeText(requireActivity(), "Riemipire correttamente tutti i campi", Toast.LENGTH_LONG).show()
+                    }
+                }
+                else {
+
+                        nomeProfiloOK = nomeProfilo != ""
+                        cognomeProfiloOK = cognomeProfilo != ""
+
+                        if (dataNascitaProfilo == "") {
+                            dataNascitaProfiloOK = false
+                            editTextDataNascitaProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                        } else {
+                            try {
+                                LocalDate.parse(
+                                    dataNascitaProfilo,
+                                    DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ITALY)
+                                )
+                                dataNascitaProfiloOK = true
+                                editTextDataNascitaProfilo2.setBackgroundResource(R.drawable.text_view_border)
+                            } catch (e: Exception) {
+                                dataNascitaProfiloOK = false
+                                editTextDataNascitaProfilo2.setBackgroundResource(R.drawable.text_view_border_red)
+                            }
+                        }
+                        emailProfiloOK = emailProfilo != ""
+                        codiceFiscaleProfiloOK = codiceFiscaleProfilo != ""
+                        altezzaProfiloOK = altezzaProfiloText != ""
+                        pesoProfiloOK = pesoProfiloText != ""
+                        circonferenzaVitaProfiloOK = circonferenzaVitaProfiloText != ""
+                        massaMagraProfiloOK = massaMagraProfiloText != ""
+                        massaGrassaProfiloOK = massaGrassaProfiloText != ""
+                        allergieProfiloOK = allergieProfilo != ""
+                        patologieProfiloOK = patologieProfilo != ""
+                        spinnerGruppoSanguignoOk =
+                            spinnergrupposanguigno.selectedItem != "- Seleziona -"
+                        photoUriOK = this::localImageUri.isInitialized
+
+                        if (!(nomeProfiloOK && cognomeProfiloOK && dataNascitaProfiloOK && emailProfiloOK && codiceFiscaleProfiloOK && altezzaProfiloOK && photoUriOK && pesoProfiloOK && circonferenzaVitaProfiloOK && massaMagraProfiloOK && massaGrassaProfiloOK && allergieProfiloOK && patologieProfiloOK && spinnerGruppoSanguignoOk)) {
+                            Toast.makeText(
+                                requireContext(),
+                                "Riempire almeno uno dei campi",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+
+                        }
+                    }
+                }
             }
         }
-        if(emailProfilo == "") {
-            emailProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            emailProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(codiceFiscaleProfilo == "") {
-            codiceFiscaleProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            codiceFiscaleProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(altezzaProfilo == "") {
-            altezzaProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            altezzaProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(pesoProfilo == "") {
-            pesoProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            pesoProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(circonferenzaVitaProfilo == "") {
-            circonferenzaVitaProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            circonferenzaVitaProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(massaMagraProfilo== "") {
-            massaMagraProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            massaMagraProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(massaGrassaProfilo == "") {
-            massaGrassaProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            massaGrassaProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(allergieProfilo == "") {
-            allergieProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            allergieProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if(patologieProfilo == "") {
-            patologieProfiloOK = false
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border_red)
-        }
-        else {
-            patologieProfiloOK = true
-            editTextNomeFarmaco.setBackgroundResource(R.drawable.text_view_border)
-        }
-        if (!this::photoUri.isInitialized){
-            photoUriOK = false
-            Toast.makeText(requireActivity(), "Inserire una foto", Toast.LENGTH_SHORT).show()
-        }
-        else
-            photoUriOK = true
 
-        if(nomeProfiloOK && cognomeProfiloOK && dataNascitaProfiloOK && emailProfiloOK && codiceFiscaleProfiloOK && altezzaProfiloOK && photoUriOK && pesoProfiloOK && circonferenzaVitaProfiloOK && massaMagraProfiloOK && massaGrassaProfiloOK && allergieProfiloOK && patologieProfiloOK) {
-           /* val action = FarmaciInserireUnFarmaco1Directions.actionInserireUnFarmaco2(
-                photoUri.toString()
-            )
-            navc?.navigate(action)*/
-        }
-        else{
-            Toast.makeText(requireActivity(), "Riemipire correttamente tutti i campi", Toast.LENGTH_LONG).show()
-            isOK = false
-        }
-    }
-
-    private fun pickImage(){
+    private fun pickImage() {
         val imagePickerIntent = Intent(Intent.ACTION_GET_CONTENT)
         imagePickerIntent.type = "image/*"
         startActivityForResult(imagePickerIntent, com.example.PillsKeeper.PICK_IMAGE_CODE)
@@ -212,16 +333,15 @@ class ImpostazioniModifica : Fragment(), View.OnClickListener {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == com.example.PillsKeeper.PICK_IMAGE_CODE){
-            if(resultCode == Activity.RESULT_OK){
-                photoUri = data?.data!!
+        if (requestCode == com.example.PillsKeeper.PICK_IMAGE_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                localImageUri = data?.data!!
                 //var file = File(photoUri?.path)
                 //CAMBIO DI IMMAGINE
-                Glide.with(this!!).load(photoUri).circleCrop().into(image)
-            }else{
+                Glide.with(this!!).load(localImageUri).circleCrop().into(image)
+            } else {
                 Toast.makeText(context, "image pick canceled", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
 }
