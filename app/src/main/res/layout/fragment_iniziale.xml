@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/immagineProfilo"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="46dp"
+        android:contentDescription="@string/immagine_del_farmaco"
+        android:src="@mipmap/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView67"></de.hdodenhof.circleimageview.CircleImageView>
+
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
@@ -35,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/immagineProfilo"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -47,7 +58,6 @@
         android:textColor="#F28891"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,19 +158,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@mipmap/doctor" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="143dp"
-        android:layout_height="143dp"
-        android:contentDescription="@string/foto"
-        android:scaleType="fitStart"
-        android:src="@mipmap/account"
-        app:layout_constraintBottom_toTopOf="@+id/textView66"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView67" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

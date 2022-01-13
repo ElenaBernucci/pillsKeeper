@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -21,6 +22,7 @@ import com.example.PillsKeeper.R
 import com.example.PillsKeeper.model.Utente
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco1.*
@@ -63,14 +65,45 @@ class ImpostazioniModifica : Fragment(), View.OnClickListener {
         navc = Navigation.findNavController(view)
         textView25.setOnClickListener(this)
         textView62.setOnClickListener(this)
-        db.collection("Utenti").document(uid.toString()).collection("Dati personali")
+        /*db.collection("Utenti").document(uid.toString()).collection("Dati personali")
             .get()
             .addOnSuccessListener { result ->
                 primaRegistrazione = result.isEmpty
+                if(!primaRegistrazione){
+                    for (document in result) {
+                        val utente: Utente = document.toObject()
+
+                        editTextNomeProfilo2.hint = utente.nome
+                        editTextCognomeProfilo2.hint = utente.cognome
+                        editTextDataNascitaProfilo2.hint = utente.dataDiNascita
+                        editTextEmailProfilo2.hint = utente.email
+                        editTextCodicefiscaleProfilo2.hint = utente.codiceFiscale
+                        editTextAltezza.hint = utente.altezza.toString()
+                        editTextPeso.hint = utente.peso.toString()
+                        editTextCirconferenzavita.hint = utente.circonferenzaVita.toString()
+                        editTextMassamagra.hint = utente.massaGrassa.toString()
+                        editTextMassagrassa.hint = utente.massaGrassa.toString()
+                        if(utente.allergie != "")
+                            editTextAllergiegenerali.hint = utente.allergie
+                        if(utente.patologie != "")
+                            editTextPatologie3.hint = utente.patologie
+                        spinnergrupposanguigno.setSelection(getIndex(spinnergrupposanguigno, utente.gruppoSanguigno))
+                    }
+                }
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Error Loading Database", Toast.LENGTH_LONG).show()
+            }*/
+    }
+
+    private fun getIndex(spinnergrupposanguigno: Spinner?, gruppoSanguigno: String): Int {
+        val i = 0
+        while (i < spinnergrupposanguigno?.getCount()!!) {
+            if (spinnergrupposanguigno.getItemAtPosition(i).toString().equals(gruppoSanguigno)) {
+                return i
             }
+        }
+        return 0
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -260,7 +293,7 @@ class ImpostazioniModifica : Fragment(), View.OnClickListener {
                             storageAccess.downloadUrl.addOnSuccessListener {
                                 remoteImageUri = it.toString()
 
-                                val utente = Utente(nomeProfilo, cognomeProfilo, dataNascitaProfilo, emailProfilo, codiceFiscaleProfilo, altezzaProfilo, circonferenzaVitaProfilo, massaMagraProfilo, massaGrassaProfilo, allergieProfilo, patologieProfilo, spinnerGruppoSanguigno, remoteImageUri)
+                                val utente = Utente(nomeProfilo, cognomeProfilo, dataNascitaProfilo, emailProfilo, codiceFiscaleProfilo, altezzaProfilo, pesoProfilo, circonferenzaVitaProfilo, massaMagraProfilo, massaGrassaProfilo, allergieProfilo, patologieProfilo, spinnerGruppoSanguigno, remoteImageUri)
                                 db.collection("Utenti").document(uid.toString()).collection("Dati personali").document(
                                     "$nomeProfilo $cognomeProfilo"
                                 ).set(utente)

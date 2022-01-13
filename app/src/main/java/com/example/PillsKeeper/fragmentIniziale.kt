@@ -1,6 +1,7 @@
 package com.example.PillsKeeper
 
 
+import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -16,7 +17,9 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.PillsKeeper.adapters.farmaciAdapter
+import com.example.PillsKeeper.model.Farmaco
 import com.example.PillsKeeper.model.FarmacoMinimal
+import com.example.PillsKeeper.model.Utente
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.AuthUI.IdpConfig
 import com.firebase.ui.auth.AuthUI.IdpConfig.EmailBuilder
@@ -29,6 +32,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.fragment_farmaci_visualizza.*
 import kotlinx.android.synthetic.main.fragment_iniziale.*
 import java.time.LocalTime
@@ -40,6 +44,7 @@ class FirstFragment : Fragment(), View.OnClickListener {
     val user = Firebase.auth.currentUser
     val uid = user?.uid
     val db = Firebase.firestore
+    val storage = Firebase.storage
 
     // [START auth_fui_create_launcher]
     // See: https://developer.android.com/training/basics/intents/result
@@ -74,7 +79,32 @@ class FirstFragment : Fragment(), View.OnClickListener {
         if(uid == null){
             navc.navigate(R.id.action_to_inizialeAccessoFragment)
         }
-        Log.d("onViewCreated",uid.toString())
+        else{
+            db.collection("Utenti").document(uid.toString()).collection("Dati personali")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        val utente: Utente = document.toObject()
+                        //Log.d("AccessoFarmaci", farmaco.toString())
+                        val httpsReference = storage.getReferenceFromUrl(utente.imageURL)
+                        val image: Long = 512 * 512
+                        httpsReference.getBytes(image).addOnSuccessListener {
+
+                            val bitmap = BitmapFactory.decodeByteArray(it, 0, it.size)
+                            immagineProfilo.setImageBitmap(bitmap)
+                        }.addOnFailureListener{
+                            Toast.makeText(requireContext(), "Impossibile caricare l'immagine", Toast.LENGTH_LONG).show()
+                        }
+
+                        val nomeCognome = utente.nome + " " + utente.cognome
+                        textView66.text = nomeCognome
+                    }
+
+                }
+                .addOnFailureListener { exception ->
+                    Log.d("AccessoFarmaci", "Error getting documents: ", exception)
+                }
+        }
 
         /*db.collection("Utenti").document(uid.toString()).collection("farmacoTest").document("farm").set(city)
             .addOnSuccessListener { Log.d("Firestore", "DocumentSnapshot successfully written!") }

@@ -41,10 +41,11 @@
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco1.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmaci_inserire_un_farmaco2.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_farmacia_nessuna_farmacia.xml" value="0.1" />
-        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_impostazioni_modifica.xml" value="0.2" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_impostazioni_modifica.xml" value="0.25" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_iniziale.xml" value="0.16" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_iniziale_accesso.xml" value="0.18" />
         <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/fragment_log_loggato.xml" value="0.10371376811594203" />
+        <entry key="..\:/Users/luca/AndroidStudioProjects/pillsKeeper/app/src/main/res/layout/recycler_row.xml" value="0.19635416666666666" />
       </map>
     </option>
   </component>
