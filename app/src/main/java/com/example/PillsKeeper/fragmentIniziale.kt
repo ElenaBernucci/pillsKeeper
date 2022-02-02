@@ -68,7 +68,7 @@ class FirstFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         navc= Navigation.findNavController(view)
-        imageButtonReminder.setOnClickListener(this)
+        imageButtonReminder2.setOnClickListener(this)
         imageButtonFarmaci2.setOnClickListener(this)
         imageButtonReminder2.setOnClickListener(this)
         imageButtonFarmacia2.setOnClickListener(this)
