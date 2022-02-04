@@ -138,7 +138,7 @@ class FirstFragment : Fragment(), View.OnClickListener {
             }
 
             R.id.imageButtonFarmacia2 -> {
-                navc.navigate(R.id.actionToFarmaciaNessunaFarmacia)
+                navc.navigate(R.id.action_firstFragment_to_mapsActivity2)
             }
 
             R.id.imageButtonMedico2 -> {

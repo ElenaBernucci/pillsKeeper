@@ -39,4 +39,5 @@
     <string name="impostazioni">Impostazioni</string>
     <string name="foto">foto</string>
     <string name="profilo">Profilo</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

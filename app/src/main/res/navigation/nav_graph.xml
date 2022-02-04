@@ -23,9 +23,6 @@
             android:id="@+id/actionToDottoreNessunDottore"
             app:destination="@id/dottoreNessunDottore" />
         <action
-            android:id="@+id/actionToFarmaciaNessunaFarmacia"
-            app:destination="@id/farmaciaNessunaFarmacia" />
-        <action
             android:id="@+id/fromFirstFragmentToFarmaciVisualizza"
             app:destination="@id/farmaciVisualizza" />
         <action
@@ -37,6 +34,9 @@
         <action
             android:id="@+id/from_firstFragment_to_logLoggato"
             app:destination="@id/logLoggato" />
+        <action
+            android:id="@+id/action_firstFragment_to_mapsActivity2"
+            app:destination="@id/mapsActivity2" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
@@ -103,7 +103,7 @@
         tools:layout="@layout/fragment_reminder_inserire_reminder" />
     <fragment
         android:id="@+id/contattiNessunContatto"
-        android:name="com.example.PillsKeeper.ContattiNessunContatto"
+        android:name="com.example.PillsKeeper.contatti.ContattiNessunContatto"
         android:label="fragment_contatti_nessun_contatto"
         tools:layout="@layout/fragment_contatti_nessun_contatto" >
         <action
@@ -112,7 +112,7 @@
     </fragment>
     <fragment
         android:id="@+id/contattiInserireunContatto"
-        android:name="com.example.PillsKeeper.contattiInserireunContatto"
+        android:name="com.example.PillsKeeper.contatti.contattiInserireunContatto"
         android:label="fragment_contatti_inserireun_contatto"
         tools:layout="@layout/fragment_contatti_inserireun_contatto" >
         <action
@@ -138,13 +138,8 @@
             app:destination="@id/dottore_visualizza" />
     </fragment>
     <fragment
-        android:id="@+id/farmaciaNessunaFarmacia"
-        android:name="com.example.PillsKeeper.FarmaciaNessunaFarmacia"
-        android:label="fragment_farmacia_nessuna_farmacia"
-        tools:layout="@layout/fragment_farmacia_nessuna_farmacia" />
-    <fragment
         android:id="@+id/contattiContattoSelezionato"
-        android:name="com.example.PillsKeeper.contattiContattoSelezionato"
+        android:name="com.example.PillsKeeper.contatti.contattiContattoSelezionato"
         android:label="fragment_contatti_contatto_selezionato"
         tools:layout="@layout/fragment_contatti_contatto_selezionato" />
     <fragment
@@ -164,7 +159,7 @@
     </fragment>
     <fragment
         android:id="@+id/impostazioniModifica1"
-        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica1"
+        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica"
         android:label="ImpostazioniModifica1" >
         <action
             android:id="@+id/actionToImpostazioniModifica2"
@@ -227,4 +222,9 @@
             android:id="@+id/from_impostazioniModifica_to_firstFragment"
             app:destination="@id/firstFragment" />
     </fragment>
+    <activity
+        android:id="@+id/mapsActivity2"
+        android:name="com.example.PillsKeeper.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
 </navigation>
