@@ -123,9 +123,9 @@ class FirstFragment : Fragment(), View.OnClickListener {
                     .get()
                     .addOnSuccessListener { result ->
                         if (result.isEmpty){
-                            navc?.navigate(R.id.actionToNessunFarmaco)
+                            navc.navigate(R.id.actionToNessunFarmaco)
                         } else{
-                            navc?.navigate(R.id.fromFirstFragmentToFarmaciVisualizza)
+                            navc.navigate(R.id.fromFirstFragmentToFarmaciVisualizza)
                         }
                     }
                     .addOnFailureListener {
@@ -134,15 +134,29 @@ class FirstFragment : Fragment(), View.OnClickListener {
             }
 
             R.id.imageButtonReminder2 -> {
-                navc?.navigate(R.id.actionToNoReminder)
+                navc.navigate(R.id.actionToNoReminder)
             }
 
             R.id.imageButtonFarmacia2 -> {
-                navc?.navigate(R.id.actionToFarmaciaNessunaFarmacia)
+                navc.navigate(R.id.actionToFarmaciaNessunaFarmacia)
             }
 
             R.id.imageButtonMedico2 -> {
-                navc?.navigate(R.id.actionToDottoreNessunDottore)
+                navc.navigate(R.id.actionToDottoreNessunDottore)
+            }
+            R.id.textView19 -> {
+                db.collection("Utenti").document(uid.toString()).collection("Dati personali")
+                    .get()
+                    .addOnSuccessListener { result ->
+                        if (result.isEmpty){
+                            navc.navigate(R.id.from_firstFragment_to_impostazioniModifica)
+                        } else{
+                            navc.navigate(R.id.from_firstFragment_to_logLoggato)
+                        }
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(requireContext(), "Error Loading Database", Toast.LENGTH_LONG).show()
+                    }
             }
         }
     }

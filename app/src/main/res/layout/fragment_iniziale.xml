@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:minHeight="48dp"
-        android:text="@string/impostazioni"
+        android:text="@string/profilo"
         android:textColor="@color/azzurro"
         android:textSize="22sp"
         android:textStyle="bold"

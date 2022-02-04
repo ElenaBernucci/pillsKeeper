@@ -34,6 +34,9 @@
         <action
             android:id="@+id/from_firstFragment_to_impostazioniModifica"
             app:destination="@id/impostazioniModifica" />
+        <action
+            android:id="@+id/from_firstFragment_to_logLoggato"
+            app:destination="@id/logLoggato" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
