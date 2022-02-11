@@ -158,33 +158,15 @@
             app:destination="@id/firstFragment" />
     </fragment>
     <fragment
-        android:id="@+id/impostazioniModifica1"
-        android:name="com.example.PillsKeeper.utente.ImpostazioniModifica"
-        android:label="ImpostazioniModifica1" >
-        <action
-            android:id="@+id/actionToImpostazioniModifica2"
-            app:destination="@id/farmaciInserireUnFarmaco22" />
-    </fragment>
-    <fragment
-        android:id="@+id/farmaciInserireUnFarmaco22"
-        android:name="com.example.PillsKeeper.FarmaciInserireUnFarmaco2"
-        android:label="FarmaciInserireUnFarmaco2" />
-    <fragment
-        android:id="@+id/logNonLoggato"
-        android:name="com.example.PillsKeeper.utente.logNonLoggato"
-        android:label="fragment_log_non_loggato"
-        tools:layout="@layout/fragment_log_non_loggato" >
-        <action
-            android:id="@+id/actionToLogLoggato"
-            app:destination="@id/logLoggato" />
-    </fragment>
-    <fragment
         android:id="@+id/logLoggato"
         android:name="com.example.PillsKeeper.utente.logLoggato"
         android:label="logLoggato" >
         <action
-            android:id="@+id/actionToImpostazioniModifica1"
-            app:destination="@id/impostazioniModifica1" />
+            android:id="@+id/action_logLoggato_to_impostazioniModifica"
+            app:destination="@id/impostazioniModifica" />
+        <action
+            android:id="@+id/action_logLoggato_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/dottore_visualizza"
@@ -219,7 +201,7 @@
         android:name="com.example.PillsKeeper.utente.ImpostazioniModifica"
         android:label="ImpostazioniModifica" >
         <action
-            android:id="@+id/from_impostazioniModifica_to_firstFragment"
+            android:id="@+id/action_impostazioniModifica_to_firstFragment"
             app:destination="@id/firstFragment" />
     </fragment>
     <activity

@@ -13,7 +13,7 @@
 
 
     <TextView
-        android:id="@+id/textViewModificaDottore4"
+        android:id="@+id/textViewUtenteGruppoSanguigno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -24,10 +24,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore6" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtentePatologie" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore9"
+        android:id="@+id/textViewUtenteMassaGrassa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -38,24 +38,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore10" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteMassaMagra" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore15"
+        android:id="@+id/textViewUtenteEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Mail"
+        android:text="Email"
         android:textColor="@color/blu"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore16" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteDataDiNascita" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore22"
+        android:id="@+id/textViewUtenteModifica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -65,23 +65,23 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore4" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteGruppoSanguigno" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore23"
+        android:id="@+id/textViewUtenteIndietro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Esci"
+        android:text="Indietro"
         android:textColor="@color/rosa"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore22" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteModifica" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore16"
+        android:id="@+id/textViewUtenteDataDiNascita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -92,24 +92,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore17" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteCognome" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Allergie farmaci"
-        android:textColor="@color/blu"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore8" />
-
-    <TextView
-        android:id="@+id/textViewModificaDottore11"
+        android:id="@+id/textViewUtenteCirconferenzaVita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -120,10 +106,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore12" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtentePeso" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore10"
+        android:id="@+id/textViewUtenteMassaMagra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -134,10 +120,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore11" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteCirconferenzaVita" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore17"
+        android:id="@+id/textViewUtenteCognome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -148,10 +134,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore18" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteNome" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore12"
+        android:id="@+id/textViewUtentePeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -162,10 +148,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore13" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteAltezza" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore13"
+        android:id="@+id/textViewUtenteAltezza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -176,10 +162,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore14" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteCodiceFiscale" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore18"
+        android:id="@+id/textViewUtenteNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -193,10 +179,10 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore6"
+        android:id="@+id/textViewUtentePatologie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="Patologie"
         android:textColor="@color/blu"
         android:textSize="18sp"
@@ -204,10 +190,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore7" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteAllergie" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore14"
+        android:id="@+id/textViewUtenteCodiceFiscale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -218,9 +204,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore15" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteEmail" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView11"
         android:layout_width="130dp"
         android:layout_height="138dp"
@@ -233,18 +219,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewModificaDottore8"
+        android:id="@+id/textViewUtenteAllergie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Allergie generali"
+        android:text="Allergie"
         android:textColor="@color/blu"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore9" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUtenteMassaGrassa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

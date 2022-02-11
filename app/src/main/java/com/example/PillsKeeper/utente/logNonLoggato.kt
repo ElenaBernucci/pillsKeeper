@@ -10,9 +10,7 @@ import androidx.navigation.Navigation
 import com.example.PillsKeeper.R
 import kotlinx.android.synthetic.main.fragment_log_non_loggato.*
 
-class logNonLoggato : Fragment(), View.OnClickListener {
-
-    lateinit var navc: NavController
+class logNonLoggato : Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,12 +22,5 @@ class logNonLoggato : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        navc= Navigation.findNavController(view)
-        textViewModificaDottore3.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View?) {
-        navc?.navigate(R.id.actionToLogLoggato)
     }
 }

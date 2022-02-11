@@ -158,6 +158,10 @@ class FirstFragment : Fragment(), View.OnClickListener {
                         Toast.makeText(requireContext(), "Error Loading Database", Toast.LENGTH_LONG).show()
                     }
             }
+            R.id.textView68 -> {
+                signOut()
+                navc.navigate(R.id.action_to_inizialeAccessoFragment)
+            }
         }
     }
 
@@ -196,5 +200,14 @@ class FirstFragment : Fragment(), View.OnClickListener {
             // ...
         }
     }
-    // [END auth_fui_result]
+
+    private fun signOut() {
+        // [START auth_fui_signout]
+        AuthUI.getInstance()
+            .signOut(requireContext())
+            .addOnCompleteListener {
+                Toast.makeText(requireContext(), "Logout effettuato con successo", Toast.LENGTH_LONG).show()
+            }
+        // [END auth_fui_result]
+    }
 }
