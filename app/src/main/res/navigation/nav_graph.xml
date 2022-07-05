@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_firstFragment_to_mapsActivity2"
             app:destination="@id/mapsActivity2" />
+        <action
+            android:id="@+id/from_firstFragment_to_dottore_visualizza"
+            app:destination="@id/dottore_visualizza" />
     </fragment>
     <fragment
         android:id="@+id/farmaciNessunFarmaco"
@@ -46,6 +49,9 @@
         <action
             android:id="@+id/actionInserireUnFarmaco1"
             app:destination="@id/faraciInserireUnFarmaco1" />
+        <action
+            android:id="@+id/from_farmaciNessunFarmaco_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/faraciInserireUnFarmaco1"
@@ -55,6 +61,15 @@
         <action
             android:id="@+id/actionInserireUnFarmaco2"
             app:destination="@id/farmaciInserireUnFarmaco2" />
+        <action
+            android:id="@+id/from_faraciInserireUnFarmaco1_to_farmaciNessunFarmaco"
+            app:destination="@id/farmaciNessunFarmaco" />
+        <action
+            android:id="@+id/action_faraciInserireUnFarmaco1_to_farmaciVisualizza"
+            app:destination="@id/farmaciVisualizza" />
+        <action
+            android:id="@+id/from_faraciInserireUnFarmaco1_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/farmaciInserireUnFarmaco2"
@@ -127,6 +142,9 @@
         <action
             android:id="@+id/actionToInserireUnDottore"
             app:destination="@id/dottoreInserireUnDottore" />
+        <action
+            android:id="@+id/from_dottoreNessunDottore_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/dottoreInserireUnDottore"
@@ -136,6 +154,12 @@
         <action
             android:id="@+id/action_to_dottore_visualizza"
             app:destination="@id/dottore_visualizza" />
+        <action
+            android:id="@+id/from_dottoreInserireUnDottore_to_dottoreNessunDottore"
+            app:destination="@id/dottoreNessunDottore" />
+        <action
+            android:id="@+id/from_dottoreInserireUnDottore_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/contattiContattoSelezionato"
@@ -172,7 +196,17 @@
         android:id="@+id/dottore_visualizza"
         android:name="com.example.PillsKeeper.dottore_visualizza"
         android:label="fragment_dottore_visualizza"
-        tools:layout="@layout/fragment_dottore_visualizza" />
+        tools:layout="@layout/fragment_dottore_visualizza" >
+        <action
+            android:id="@+id/from_dottore_visualizza_to_dottoreInserireUnDottore"
+            app:destination="@id/dottoreInserireUnDottore" />
+        <action
+            android:id="@+id/actionToDottoreSelezionato"
+            app:destination="@id/dottoreDottoreSelezionato" />
+        <action
+            android:id="@+id/from_dottore_visualizza_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
     <fragment
         android:id="@+id/visualizzaFarmaco"
         android:name="com.example.PillsKeeper.visualizzaFarmaco"
@@ -183,6 +217,9 @@
         <action
             android:id="@+id/fromVisualizzaFarmacoTofarmaciVisualizza"
             app:destination="@id/farmaciVisualizza" />
+        <action
+            android:id="@+id/from_visualizzaFarmaco_to_farmaciNessunFarmaco2"
+            app:destination="@id/farmaciNessunFarmaco" />
     </fragment>
     <fragment
         android:id="@+id/inizialeAccessoFragment"
@@ -209,4 +246,19 @@
         android:name="com.example.PillsKeeper.MapsActivity"
         android:label="activity_maps"
         tools:layout="@layout/activity_maps" />
+    <fragment
+        android:id="@+id/dottoreDottoreSelezionato"
+        android:name="com.example.PillsKeeper.dottoreDottoreSelezionato"
+        android:label="fragment_dottore_dottore_selezionato"
+        tools:layout="@layout/fragment_dottore_dottore_selezionato" >
+        <argument
+            android:name="Dottore"
+            app:argType="com.example.PillsKeeper.model.Dottore" />
+        <action
+            android:id="@+id/from_dottoreDottoreSelezionato_to_dottore_visualizza"
+            app:destination="@id/dottore_visualizza" />
+        <action
+            android:id="@+id/from_dottoreDottoreSelezionato_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
 </navigation>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.PillsKeeper.R
@@ -14,6 +15,13 @@ import kotlinx.android.synthetic.main.fragment_dottore_nessun_dottore.*
 class dottoreNessunDottore : Fragment(), View.OnClickListener {
 
     lateinit var navc: NavController
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            navc.navigate(R.id.from_dottoreNessunDottore_to_firstFragment)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

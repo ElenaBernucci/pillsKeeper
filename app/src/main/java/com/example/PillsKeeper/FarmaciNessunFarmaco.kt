@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -14,6 +15,13 @@ import kotlinx.android.synthetic.main.fragment_farmaci_nessun_farmaco.*
 class FarmaciNessunFarmaco : Fragment(), View.OnClickListener {
 
     lateinit var navc: NavController
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            navc.navigate(R.id.from_farmaciNessunFarmaco_to_firstFragment)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -11,12 +11,14 @@
         android:id="@+id/textViewRichiediUnaRicetta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:text="Richiedi una ricetta"
         android:textColor="#F28891"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEliminaDottore"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -48,20 +50,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Applica modifiche"
-        android:textColor="#F28891"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRichiediUnaRicetta" />
-
-    <TextView
         android:id="@+id/textViewEliminaDottore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,21 +59,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewModificaDottore" />
-
-    <TextView
-        android:id="@+id/textViewModificaDottore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Modifica dottore"
-        android:textColor="@color/blu"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRichiediUnaRicetta" />
 
     <TextView
         android:id="@+id/textView32"
@@ -161,7 +137,7 @@
         android:id="@+id/imageView5"
         android:layout_width="130dp"
         android:layout_height="138dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:src="@mipmap/account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

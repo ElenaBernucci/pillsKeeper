@@ -155,7 +155,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private fun buildLocationCallback() {
         locationCallBack = object :LocationCallback(){
-            override fun onLocationResult(p0: LocationResult?) {
+            override fun onLocationResult(p0: LocationResult) {
                 mLastlocation = p0!!.locations.get(p0!!.locations.size-1) //get last location
 
                 if (mMarker != null){

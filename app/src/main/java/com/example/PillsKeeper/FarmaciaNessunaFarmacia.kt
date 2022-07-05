@@ -73,7 +73,7 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
             buildLocationRequest()
             buildLocationCallBack()
 
-            fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
+            fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireContext())
             fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
 
 
@@ -92,8 +92,8 @@ class FarmaciaNessunaFarmacia : Fragment(), OnMapReadyCallback {
                     mMarker!!.remove()
                 }
 
-                latitudine = p0.lastLocation.latitude
-                longitudine = p0.lastLocation.longitude
+                latitudine = p0.lastLocation!!.latitude
+                longitudine = p0.lastLocation!!.longitude
 
                 val latLng = LatLng(latitudine,longitudine)
                 val markerOptions = MarkerOptions()

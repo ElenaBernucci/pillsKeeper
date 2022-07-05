@@ -74,5 +74,6 @@ class farmaciAdapter (var context: Context,
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)
+        fun onBackPressed(v: View?)
     }
 }

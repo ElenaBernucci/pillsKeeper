@@ -41,7 +41,7 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".MenuIniziale" />
         <activity android:name=".contatti.contatti" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity" android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

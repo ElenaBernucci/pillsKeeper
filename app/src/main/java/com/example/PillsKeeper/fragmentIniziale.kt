@@ -142,7 +142,18 @@ class FirstFragment : Fragment(), View.OnClickListener {
             }
 
             R.id.imageButtonMedico2 -> {
-                navc.navigate(R.id.actionToDottoreNessunDottore)
+                db.collection("Utenti").document(uid.toString()).collection("Dottore")
+                    .get()
+                    .addOnSuccessListener { result ->
+                        if (result.isEmpty)
+                            navc.navigate(R.id.actionToDottoreNessunDottore)
+                        else
+                            navc.navigate(R.id.from_firstFragment_to_dottore_visualizza)
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(requireContext(), "Error Loading Database", Toast.LENGTH_LONG).show()
+                    }
+
             }
             R.id.textView19 -> {
                 db.collection("Utenti").document(uid.toString()).collection("Dati personali")

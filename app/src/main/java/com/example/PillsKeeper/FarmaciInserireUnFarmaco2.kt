@@ -198,7 +198,7 @@ class FarmaciInserireUnFarmaco2 : Fragment(), View.OnClickListener {
                     }
                     else{
                         when(quandoPrendiMedicine){
-                            0 -> orario = LocalTime.parse("8:00")
+                            0 -> orario = LocalTime.parse("08:00")
                             1 -> orario = LocalTime.parse("12:00")
                             2 -> orario = LocalTime.parse("20:00")
                         }

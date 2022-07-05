@@ -12,11 +12,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.annotation.RequiresApi
 import androidx.core.widget.addTextChangedListener
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_farmaci_inserire_un_farmaco1.*
 import org.w3c.dom.Text
 import java.io.File
@@ -33,6 +37,23 @@ class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
     private lateinit var photoUri: Uri
     private lateinit var imagePickText : TextView
     private lateinit var image : ImageView
+    private val db = Firebase.firestore
+    private val uid = Firebase.auth.currentUser?.uid
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            db.collection("Utenti").document(uid.toString()).collection("Farmaco")
+                .get()
+                .addOnSuccessListener{ result ->
+                    if (result.isEmpty)
+                        navc.navigate(R.id.from_faraciInserireUnFarmaco1_to_farmaciNessunFarmaco)
+                    else
+                        navc.navigate(R.id.action_faraciInserireUnFarmaco1_to_farmaciVisualizza)
+                }
+                .addOnFailureListener { navc.navigate(R.id.from_faraciInserireUnFarmaco1_to_firstFragment) }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -159,7 +180,7 @@ class FarmaciInserireUnFarmaco1 : Fragment(), View.OnClickListener {
                 textDate,
                 photoUri.toString()
             )
-            navc?.navigate(action)
+            navc.navigate(action)
         }
         else{
             Toast.makeText(requireActivity(), "Riemipire correttamente tutti i campi", Toast.LENGTH_LONG).show()
